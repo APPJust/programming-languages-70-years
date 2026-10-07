@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="程式語言的七十年：從 0 與 1 到 AI。中英配音、繁中＋英文／越南文字幕的互動教學動畫，李振偉老師。">
+</head>
+<body>
+<title>程式語言的七十年</title>
+<style>
+/* Layout: a single column built around the 16:9 lesson frame — frame, transport bar, then two practice panels.
+   The frame is the video itself and keeps its printed-paper look in both themes; only the page around it follows the theme. */
+:root{
+  /* page chrome (themed) */
+  --page:#E4DED0; --surface:#FBF8F1; --line:#C9BFA9; --text:#1E2430; --soft:#5B6472;
+  --control:#FFFFFF; --good:#166534; --bad:#9A3412; --focus:#C2410C;
+  /* lesson frame (fixed, never themed) */
+  --paper:#F4F0E6; --ink:#1E2430; --muted:#5B6472; --accent:#C2410C; --cap:#1E2430F0; --cap2:#E9DFC9;
+  --sans:"Noto Sans","Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --page:#14171D; --surface:#1D222B; --line:#343B47; --text:#E8E4DA; --soft:#A3ABB8;
+  --control:#262C37; --good:#86EFAC; --bad:#FDBA74; --focus:#FB923C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --page:#14171D; --surface:#1D222B; --line:#343B47; --text:#E8E4DA; --soft:#A3ABB8;
+  --control:#262C37; --good:#86EFAC; --bad:#FDBA74; --focus:#FB923C; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font-family:var(--sans)}
+button,select,input{font:inherit}
+button,select{background:var(--control);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:8px 14px;cursor:pointer;max-width:100%}
+button:hover,select:hover{border-color:var(--soft)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+#shell{margin:0 auto;max-width:1400px;padding-block:20px 28px;padding-inline:16px}
+.intro{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin:0 0 12px}
+.intro h1{margin:0;font-size:clamp(20px,3vw,28px);font-weight:800;text-wrap:balance}
+.intro p{margin:0;color:var(--soft);font-size:14px;font-variant-numeric:tabular-nums}
+#viewport{position:relative;overflow:hidden;border-radius:14px;box-shadow:0 18px 50px #0004;max-width:100%}
+#stage{position:relative;transform-origin:top left;background:var(--paper);color:var(--ink);overflow:hidden}
+#viz{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#header{position:absolute;left:96px;top:52px;width:1728px;z-index:2}
+#eyebrow{font-size:24px;letter-spacing:4px;font-weight:700;color:var(--accent);margin:0 0 6px;height:34px}
+#heading{font-size:58px;line-height:1.25;margin:0;font-weight:800;height:74px;white-space:nowrap;color:var(--ink)}
+#subheading{font-size:30px;line-height:1.3;color:var(--muted);margin:8px 0 0;height:40px;white-space:nowrap}
+#caption{position:absolute;left:150px;bottom:34px;width:1620px;height:160px;z-index:3;border-radius:16px;background:var(--cap);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px 28px;text-align:center;gap:6px;color:#fff}
+#caption1{font-size:44px;line-height:1.3;font-weight:600;white-space:nowrap}
+#caption2{font-size:37px;line-height:1.3;color:var(--cap2);white-space:nowrap}
+#progress-mark{position:absolute;height:6px;background:var(--accent);left:0;bottom:0;z-index:4}
+#controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-block:14px}
+#seek{flex:1 1 160px;min-width:0;accent-color:var(--focus)}
+#time{font-variant-numeric:tabular-nums;color:var(--soft)}
+#chapters{flex:0 1 auto;min-width:0}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:12px}
+.panel{padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);min-width:0}
+.panel h2{font-size:18px;margin:0 0 10px;text-wrap:balance}
+.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+#delay{accent-color:var(--focus);flex:1 1 140px;min-width:0}
+#decadeOut{margin:10px 0 0;color:var(--good);min-height:1.5em;line-height:1.6}
+#quizTask{font-weight:700;margin:0}
+#quizChoices{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+#quizChoices button[aria-pressed=true]{background:var(--text);color:var(--page);border-color:var(--text)}
+#quizFeedback{margin:4px 0 10px;min-height:1.5em;line-height:1.6}
+.note{font-size:13px;color:var(--soft);line-height:1.6;margin:14px 0 0}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+<div id="shell">
+<header class="intro">
+<h1>程式語言的七十年：從 0 與 1 到 AI</h1>
+<p>李振偉老師・8:44・中文／English 配音</p>
+</header>
+<div id="viewport"><main id="stage" aria-label="教學動畫畫面">
+<svg id="viz" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+<div id="header"><p id="eyebrow"></p><h2 id="heading"></h2><p id="subheading"></p></div>
+<div id="caption"><div id="caption1"></div><div id="caption2"></div></div>
+<div id="progress-mark"></div>
+</main></div>
+<nav id="controls" aria-label="播放控制">
+<button id="play">播放</button><button id="replay">重播</button>
+<input id="seek" type="range" min="0" step="1" value="0" aria-label="播放進度">
+<span id="time"></span>
+<select id="locale" aria-label="配音語言"><option value="zh-TW">中文配音</option><option value="en-US">English narration</option></select>
+<select id="chapters" aria-label="章節"></select>
+<select id="subs" aria-label="字幕語言" hidden><option value="base">字幕：繁中＋英文</option><option value="vi-VN">字幕：繁中＋越南文</option></select>
+<button id="captions" aria-pressed="true">字幕開啟</button>
+</nav>
+<div class="panels">
+<section class="panel" aria-labelledby="decadeTitle">
+<h2 id="decadeTitle">時光滑桿：那一年，前 10 名有哪些已經誕生？</h2>
+<div class="row"><label for="delay">年代刻度</label><input id="delay" type="range" min="0" max="8" step="1" value="0" aria-describedby="decadeOut"><span id="decadeLabel"></span></div>
+<p id="decadeOut" role="status"></p>
+</section>
+<section class="panel" aria-labelledby="quizTitle">
+<h2 id="quizTitle">任務配對：這個任務，你會先考慮哪個語言？</h2>
+<p id="quizTask"></p>
+<div id="quizChoices" role="group" aria-label="語言選項"></div>
+<p id="quizFeedback" role="status"></p>
+<button id="quizNext">下一題</button>
+</section>
+</div>
+<p class="note">按「播放」開始（含配音）。鍵盤：空白鍵播放／暫停，← → 前後 5 秒。榜單資料：TIOBE 指數 2026 年 9 月；動畫中的流程圖與程式範例為示意，非實測。</p>
+</div>
+<script>window.LESSON_BASE = '';</script>
+<script src="data.js"></script>
+<script src="scenes.js"></script>
+<script src="scenes2.js"></script>
+<script src="player.js"></script>
+
+</body>
+</html>

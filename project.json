@@ -1,0 +1,5069 @@
+{
+ "schema_version": 1,
+ "is_template": false,
+ "title": "程式語言的七十年：從 0 與 1 到 AI",
+ "content_type": "knowledge",
+ "learning_goal": "看完能說出機器碼 → 組合語言 → 高階語言 → AI 輔助的演進與原因，分辨編譯／直譯／虛擬機器的取捨，並依任務說出 TIOBE 前 10 名中合適的語言。",
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "approval": {
+  "status": "approved",
+  "evidence": "2026-10-07 使用者於對話中回覆：「用 Despina，樣片確認，開始正式製作」（見 production-log.md）"
+ },
+ "sources": [
+  {
+   "id": "tiobe",
+   "title": "TIOBE Index for September 2026",
+   "url": "https://www.tiobe.com/tiobe-index/",
+   "checked_at": "2026-10-07"
+  },
+  {
+   "id": "tiobe-def",
+   "title": "TIOBE Programming Community Index Definition",
+   "url": "https://www.tiobe.com/tiobe-index/programminglanguages_definition/",
+   "checked_at": "2026-10-07"
+  },
+  {
+   "id": "ibm-fortran",
+   "title": "IBM History: FORTRAN",
+   "url": "https://www.ibm.com/history/fortran",
+   "checked_at": "2026-10-07"
+  },
+  {
+   "id": "ritchie-c",
+   "title": "Dennis M. Ritchie, The Development of the C Language",
+   "url": "https://www.bell-labs.com/usr/dmr/www/chist.html",
+   "checked_at": "2026-10-07"
+  },
+  {
+   "id": "rust-1",
+   "title": "Announcing Rust 1.0",
+   "url": "https://blog.rust-lang.org/2015/05/15/Rust-1.0.html",
+   "checked_at": "2026-10-07",
+   "published_at": "2015-05-15"
+  },
+  {
+   "id": "android-mem",
+   "title": "Eliminating Memory Safety Vulnerabilities at the Source (Google Security Blog)",
+   "url": "https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html",
+   "checked_at": "2026-10-07",
+   "published_at": "2024-09-25"
+  },
+  {
+   "id": "mojo-1",
+   "title": "Modular 26.5: Mojo 1.0 is here!",
+   "url": "https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here",
+   "checked_at": "2026-10-07",
+   "published_at": "2026-08-11"
+  },
+  {
+   "id": "lmpl",
+   "title": "LMPL 2026 (SPLASH/ISSTA 2026)",
+   "url": "https://conf.researchr.org/home/splash-issta-2026/lmpl-2026",
+   "checked_at": "2026-10-07"
+  },
+  {
+   "id": "gemini-tts",
+   "title": "Gemini API speech generation",
+   "url": "https://ai.google.dev/gemini-api/docs/speech-generation",
+   "checked_at": "2026-10-07"
+  }
+ ],
+ "coverage": {
+  "origin": {
+   "summary": "1957 年 IBM（John Backus 團隊）發布 FORTRAN 與其編譯器，高階語言開始普及；之前為機器碼與組合語言。",
+   "source_ids": [
+    "ibm-fortran"
+   ],
+   "date": "1957",
+   "precision": "year",
+   "event_type": "發布"
+  },
+  "principle": {
+   "summary": "編譯、直譯、虛擬機器＋JIT 三種執行流程，以及抽象層級與效能掌控的取捨（流程圖為示意）。",
+   "source_ids": [
+    "ritchie-c",
+    "rust-1"
+   ]
+  },
+  "comparison": {
+   "summary": "TIOBE 2026 年 9 月前 10 名在同一榜單與三個相同維度（執行方式、記憶體管理、型別）比較。",
+   "source_ids": [
+    "tiobe",
+    "tiobe-def"
+   ],
+   "alternatives": [
+    "Python",
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "JavaScript",
+    "Visual Basic",
+    "SQL",
+    "R",
+    "Rust"
+   ],
+   "dimensions": [
+    "TIOBE rating",
+    "first public release",
+    "execution model",
+    "memory management",
+    "type checking",
+    "typical uses"
+   ],
+   "conditions": "TIOBE Index September 2026; language properties of mainstream implementations; no performance benchmarks claimed",
+   "time_sensitive": true,
+   "checked_at": "2026-10-07"
+  },
+  "application": {
+   "summary": "Android：2019 年記憶體安全漏洞占 76%，新程式碼優先用 Rust/Kotlin 後，2024 年降至 24%；限制為舊碼仍在與跨語言成本。",
+   "source_ids": [
+    "android-mem"
+   ],
+   "case_type": "real"
+  },
+  "outlook": {
+   "summary": "已公佈：Modular 承諾 2026 年開源 Mojo 編譯器；研究中：LMPL 2026；推測：工程師轉向需求描述與驗證；未解：AI 程式碼正確性與安全。",
+   "source_ids": [
+    "mojo-1",
+    "lmpl"
+   ],
+   "claim_type": "announced",
+   "as_of": "2026-10-07"
+  }
+ },
+ "duration": 524.0,
+ "subtitle_languages": [
+  "zh-TW",
+  "en-US"
+ ],
+ "variants": {
+  "zh-TW": {
+   "mix": "audio/zh-TW-mix.m4a",
+   "scenes": [
+    {
+     "id": "hook",
+     "section": "hook",
+     "kind": "hook",
+     "start": 0.0,
+     "end": 22.982,
+     "title": "程式語言的七十年",
+     "screen": "從 0 與 1，到 AI",
+     "objective": "引發問題：電腦只懂 0/1，為何會有上千種語言？",
+     "narration": "電腦其實只看得懂 0 和 1。那為什麼世界上會有上千種程式語言？ 因為每一種語言，都是人類為了解決某個問題，而發明的翻譯方式。今天，我們走一趟七十年的旅程。",
+     "phases": [
+      {
+       "name": "s0a",
+       "start": 0.0,
+       "end": 8.26
+      },
+      {
+       "name": "s0b",
+       "start": 8.26,
+       "end": 22.982
+      }
+     ],
+     "marks": {
+      "thousands": 5.86,
+      "journey": 15.81
+     },
+     "qa_times": [
+      5.86,
+      15.81
+     ],
+     "hide_header": true
+    },
+    {
+     "id": "origin",
+     "section": "origin",
+     "kind": "origin",
+     "start": 22.982,
+     "end": 71.523,
+     "title": "起源：從 0 與 1 到 FORTRAN",
+     "screen": "1957 年：IBM 發布 FORTRAN",
+     "objective": "說出機器碼 → 組合語言 → 高階語言的轉變，以及 1957 年 FORTRAN 的意義。",
+     "narration": "最早的程式設計師，直接用機器碼寫程式：一長串的 0 與 1，寫錯一位，整個程式就出錯。 接著出現組合語言，用 ADD、MOV 這樣的簡短代號，取代難記的數字。但它仍然綁死在特定的機器上。 真正的轉捩點在 1957 年。IBM 的約翰．巴克斯團隊推出 FORTRAN，工程師第一次能用接近數學式的寫法，再由編譯器自動翻譯成機器碼。 這就是高階程式語言的起點：讓人用人的方式思考，把翻譯工作交給電腦。",
+     "phases": [
+      {
+       "name": "s1a",
+       "start": 22.982,
+       "end": 33.542
+      },
+      {
+       "name": "s1b",
+       "start": 33.542,
+       "end": 44.712
+      },
+      {
+       "name": "s1c",
+       "start": 44.712,
+       "end": 59.402
+      },
+      {
+       "name": "s1d",
+       "start": 59.402,
+       "end": 71.523
+      }
+     ],
+     "marks": {
+      "bit": 7.2,
+      "machine": 19.37,
+      "y1957": 23.52,
+      "formula": 31.38,
+      "compiler": 33.36,
+      "human": 39.87
+     },
+     "qa_times": [
+      30.182,
+      42.352,
+      46.502,
+      54.362,
+      56.342,
+      62.852
+     ],
+     "spoken_date": "1957 年"
+    },
+    {
+     "id": "principle",
+     "section": "principle",
+     "kind": "ladder",
+     "start": 71.523,
+     "end": 131.675,
+     "title": "一行程式如何被執行？",
+     "screen": "編譯・直譯・虛擬機器",
+     "objective": "分辨編譯、直譯、虛擬機器＋JIT 的流程，並理解抽象層級與效能掌控的取捨。",
+     "narration": "高階語言是怎麼變成電腦能執行的指令？我們拿一行程式來拆解。 第一種方式是編譯。像 C 與 Rust，會在執行前把整份程式，一次翻譯成機器碼。執行很快，但每次修改都要重新編譯。 第二種方式是直譯。像 Python，由直譯器一邊讀、一邊執行，修改後馬上能看到結果，代價是通常比較慢。 Java 和 C# 走中間路線：先編譯成中間碼，再交給虛擬機器，執行時把常用的部分即時編譯，兼顧可攜性與速度。 記住這個取捨：抽象層級越高，越好寫、越安全；越接近硬體，越能掌控效能，但責任也越大。",
+     "phases": [
+      {
+       "name": "s2a",
+       "start": 71.523,
+       "end": 78.943
+      },
+      {
+       "name": "s2b",
+       "start": 78.943,
+       "end": 92.013
+      },
+      {
+       "name": "s2c",
+       "start": 92.013,
+       "end": 103.483
+      },
+      {
+       "name": "s2d",
+       "start": 103.483,
+       "end": 116.753
+      },
+      {
+       "name": "s2e",
+       "start": 116.753,
+       "end": 131.675
+      }
+     ],
+     "marks": {
+      "fast": 16.25,
+      "instant": 27.1,
+      "jit": 41.378,
+      "closer": 51.14
+     },
+     "qa_times": [
+      87.773,
+      98.623,
+      112.901,
+      122.663
+     ]
+    },
+    {
+     "id": "history",
+     "section": "history",
+     "kind": "timeline",
+     "start": 131.675,
+     "end": 196.907,
+     "title": "七十年演進時間軸",
+     "screen": "每個年代，都有新的問題要解決",
+     "objective": "依時間順序說出主要語言誕生的年代與當時要解決的問題。",
+     "narration": "把七十年攤開在時間軸上。1950 年代，FORTRAN 負責科學計算，LISP 開啟人工智慧研究，COBOL 處理商業資料。 1972 年，貝爾實驗室的丹尼斯．里奇設計出 C 語言，用來撰寫 Unix 作業系統。兩年後，IBM 發表了查詢資料庫的 SQL 前身。 1980 年代，物件導向興起：C++ 在 C 的基礎上加入類別，讓大型軟體更容易組織。 1990 年代，個人電腦與網際網路爆發：Python、Visual Basic、R、Java 和 JavaScript 都在這十年誕生。 進入新世紀，微軟推出 C#；2015 年，Rust 發布 1.0，主打不需要垃圾回收的記憶體安全。到了 2020 年代，AI 成為新的推力。",
+     "phases": [
+      {
+       "name": "s3a",
+       "start": 131.675,
+       "end": 143.725
+      },
+      {
+       "name": "s3b",
+       "start": 143.725,
+       "end": 157.185
+      },
+      {
+       "name": "s3c",
+       "start": 157.185,
+       "end": 166.445
+      },
+      {
+       "name": "s3d",
+       "start": 166.445,
+       "end": 178.345
+      },
+      {
+       "name": "s3e",
+       "start": 178.345,
+       "end": 196.907
+      }
+     ],
+     "marks": {
+      "fortran": 4.64,
+      "lisp": 6.92,
+      "cobol": 9.172,
+      "c": 16.78,
+      "sql": 23.58,
+      "cpp": 28.8,
+      "python": 38.455,
+      "vb": 39.59,
+      "r": 41.6,
+      "java": 42.52,
+      "js": 43.36,
+      "csharp": 49.36,
+      "rust": 51.56,
+      "ai": 59.08,
+      "aiera": 57.5
+     },
+     "qa_times": [
+      136.315,
+      138.595,
+      140.847,
+      148.455,
+      155.255,
+      160.475,
+      170.13,
+      171.265,
+      173.275,
+      174.195,
+      175.035,
+      181.035,
+      183.235,
+      189.175,
+      190.755
+     ]
+    },
+    {
+     "id": "tiobe",
+     "section": "comparison",
+     "kind": "tiobe",
+     "start": 196.907,
+     "end": 227.628,
+     "title": "TIOBE 指數怎麼算？",
+     "screen": "每月更新｜反映熱門程度，不代表好壞",
+     "objective": "說明 TIOBE 指數的計算來源，以及它不能代表的事。",
+     "narration": "這麼多語言，哪些最多人用？TIOBE 指數每個月統計一次，計算各語言在 Google、Bing、維基百科等二十多個搜尋來源的相關結果。 要注意，它反映的是熱門程度與學習資源，不是語言的好壞，也不是程式碼的數量。以下採用 2026 年 9 月的榜單。",
+     "phases": [
+      {
+       "name": "s4a",
+       "start": 196.907,
+       "end": 211.787
+      },
+      {
+       "name": "s4b",
+       "start": 211.787,
+       "end": 227.628
+      }
+     ],
+     "marks": {
+      "monthly": 5.76,
+      "google": 8.92,
+      "notq": 19.73,
+      "sep": 23.47
+     },
+     "qa_times": [
+      202.667,
+      205.827,
+      216.637,
+      220.377
+     ],
+     "eyebrow": "comparison"
+    },
+    {
+     "id": "top10-morph",
+     "section": "comparison",
+     "kind": "morph",
+     "start": 227.628,
+     "end": 243.18,
+     "title": "把前十名放回誕生的年代",
+     "screen": "誕生年份 × 2026 年 9 月 TIOBE 排名",
+     "objective": "看出誕生年份與今日排名沒有直接關係：老語言 C 仍居前列，新語言 Rust 已進榜。",
+     "narration": "把前十名放回它們誕生的年代，會發現一件事：1972 年的 C 依然排第二，而最年輕的 Rust，已經擠進第十名。",
+     "phases": [
+      {
+       "name": "落點",
+       "start": 227.628,
+       "end": 231.218
+      },
+      {
+       "name": "變形",
+       "start": 231.218,
+       "end": 232.798
+      },
+      {
+       "name": "聚焦C",
+       "start": 232.798,
+       "end": 235.698
+      },
+      {
+       "name": "聚焦Rust",
+       "start": 235.698,
+       "end": 239.188
+      },
+      {
+       "name": "停留",
+       "start": 239.188,
+       "end": 243.18
+      }
+     ],
+     "marks": {
+      "something": 3.74,
+      "c1972": 5.32,
+      "rustf": 8.22
+     },
+     "qa_times": [
+      231.368,
+      232.948,
+      235.848
+     ]
+    },
+    {
+     "id": "top10-cards",
+     "section": "comparison",
+     "kind": "cards",
+     "start": 243.18,
+     "end": 355.612,
+     "title": "TIOBE 前 10 名逐一看",
+     "screen": "2026 年 9 月｜評分＝搜尋結果所占比例",
+     "objective": "依序說出前 10 名語言的評分、誕生年、執行方式與代表用途。",
+     "narration": "第一名 Python，市占約 17.8%。語法簡潔，加上豐富的套件，是資料科學與 AI 的共同語言。 第二名 C，約 10.3%。作業系統、嵌入式裝置與驅動程式，至今仍大量依賴它。 第三名 C++，約 8.7%。遊戲引擎、瀏覽器與高頻交易系統，需要它的速度與控制力。 第四名 Java，約 7.5%。一次編寫、到處執行，撐起大量企業後端與 Android 應用。 第五名 C#，約 4.2%。微軟的主力語言，常見於 Windows 應用、雲端服務與 Unity 遊戲開發。 第六名 JavaScript，約 2.8%。它是瀏覽器內建的語言，幾乎每個網頁的互動都靠它。 第七名 Visual Basic，約 2.6%。在 Office 自動化與企業舊系統中，依然常見。 第八名 SQL，約 2.2%。它不寫應用程式，而是專門向資料庫查詢與管理資料。 第九名 R，約 1.7%。由統計學家設計，擅長統計分析與資料視覺化。 第十名 Rust，約 1.3%。在編譯時就檢查記憶體錯誤，正逐步進入作業系統與基礎設施。",
+     "phases": [
+      {
+       "name": "s5b",
+       "start": 243.18,
+       "end": 255.21
+      },
+      {
+       "name": "s5c",
+       "start": 255.21,
+       "end": 265.95
+      },
+      {
+       "name": "s5d",
+       "start": 265.95,
+       "end": 277.61
+      },
+      {
+       "name": "s5e",
+       "start": 277.61,
+       "end": 288.35
+      },
+      {
+       "name": "s5f",
+       "start": 288.35,
+       "end": 299.65
+      },
+      {
+       "name": "s5g",
+       "start": 299.65,
+       "end": 309.63
+      },
+      {
+       "name": "s5h",
+       "start": 309.63,
+       "end": 320.01
+      },
+      {
+       "name": "s5i",
+       "start": 320.01,
+       "end": 331.11
+      },
+      {
+       "name": "s5j",
+       "start": 331.11,
+       "end": 341.25
+      },
+      {
+       "name": "s5k",
+       "start": 341.25,
+       "end": 355.612
+      }
+     ],
+     "marks": {},
+     "qa_times": []
+    },
+    {
+     "id": "compare",
+     "section": "comparison",
+     "kind": "compare",
+     "start": 355.612,
+     "end": 388.403,
+     "title": "同一張表比較十種語言",
+     "screen": "執行方式 × 記憶體管理 × 型別檢查",
+     "objective": "用相同三個維度比較十種語言，理解記憶體管理方式造成的取捨。",
+     "narration": "把十種語言放在同一張表比較：執行方式、記憶體管理、型別檢查，決定了它們各自擅長的戰場。 C 與 C++ 手動管理記憶體，速度快但容易出錯；Java、C#、Python 用垃圾回收，安全但多一點負擔；Rust 用所有權規則，在編譯時就把關。",
+     "phases": [
+      {
+       "name": "s5l",
+       "start": 355.612,
+       "end": 366.842
+      },
+      {
+       "name": "s5m",
+       "start": 366.842,
+       "end": 388.403
+      }
+     ],
+     "marks": {
+      "run": 4.14,
+      "memory": 5.64,
+      "types": 6.485,
+      "gc": 16.72,
+      "own": 24.14
+     },
+     "qa_times": [
+      359.752,
+      361.252,
+      362.097,
+      372.332,
+      379.752
+     ]
+    },
+    {
+     "id": "case",
+     "section": "application",
+     "kind": "case",
+     "start": 388.403,
+     "end": 428.975,
+     "title": "真實案例：Android 轉向記憶體安全語言",
+     "screen": "資料：Google Security Blog，2024-09-25",
+     "objective": "以問題 → 做法 → 結果 → 限制，說明語言選擇如何影響軟體安全。",
+     "narration": "來看一個真實案例。Android 的大量系統程式碼用 C 與 C++ 撰寫，2019 年，記憶體安全漏洞占所有漏洞的 76%。 Google 的做法不是全部重寫，而是讓新程式碼優先使用 Rust、Kotlin 這類記憶體安全的語言。 到了 2024 年，這個比例降到 24%。限制是：舊的 C 與 C++ 程式碼仍然存在，不同語言之間的銜接，也需要額外成本。",
+     "phases": [
+      {
+       "name": "s6a",
+       "start": 388.403,
+       "end": 401.703
+      },
+      {
+       "name": "s6b",
+       "start": 401.703,
+       "end": 411.213
+      },
+      {
+       "name": "s6c",
+       "start": 411.213,
+       "end": 428.975
+      }
+     ],
+     "marks": {
+      "android": 2.8,
+      "c76": 11.28,
+      "limits": 28.0
+     },
+     "qa_times": [
+      391.203,
+      399.683,
+      416.403
+     ]
+    },
+    {
+     "id": "ai",
+     "section": "ai",
+     "kind": "ai",
+     "start": 428.975,
+     "end": 472.027,
+     "title": "AI 時代的程式語言",
+     "screen": "Python 生態・Mojo・自然語言",
+     "objective": "說出 AI 領域目前的語言分工、Mojo 的定位，以及自然語言成為程式介面的趨勢。",
+     "narration": "那 AI 時代的語言呢？目前 AI 的主力仍是 Python，但真正的大量運算，多半交給底層的 C++ 與 GPU 程式。 Mojo 想把兩者合而為一。它在 2023 年由 Modular 公司發表，語法接近 Python，卻能直接為 CPU 與 GPU 編譯；2026 年 8 月推出第一個穩定版 1.0。 另一個變化是：自然語言本身，正在成為寫程式的介面。開發者用文字描述需求，再由 AI 助手產生程式碼。",
+     "phases": [
+      {
+       "name": "s7a",
+       "start": 428.975,
+       "end": 440.715
+      },
+      {
+       "name": "s7b",
+       "start": 440.715,
+       "end": 456.945
+      },
+      {
+       "name": "s7c",
+       "start": 456.945,
+       "end": 472.027
+      }
+     ],
+     "marks": {
+      "python": 4.7,
+      "gpu": 8.82,
+      "y2023": 15.51,
+      "cpu": 20.85,
+      "y2026": 23.808,
+      "describe": 33.68
+     },
+     "qa_times": [
+      433.675,
+      437.795,
+      444.485,
+      449.825,
+      452.783,
+      462.655
+     ]
+    },
+    {
+     "id": "outlook",
+     "section": "outlook",
+     "kind": "outlook",
+     "start": 472.027,
+     "end": 501.728,
+     "title": "展望：接下來會怎樣？",
+     "screen": "截至 2026-10-07｜已公佈・研究中・推測 分開看",
+     "objective": "區分已公佈、研究中與推測的發展，並指出尚未解決的問題。",
+     "narration": "展望未來，Modular 已宣布將在 2026 年開放 Mojo 編譯器原始碼；學界也正研究專為大型語言模型設計的程式語言。 我們推測，工程師會花更多時間描述需求與驗證結果；而 AI 產生的程式碼是否正確、安全，仍是尚未解決的問題。",
+     "phases": [
+      {
+       "name": "s8a",
+       "start": 472.027,
+       "end": 485.527
+      },
+      {
+       "name": "s8b",
+       "start": 485.527,
+       "end": 501.728
+      }
+     ],
+     "marks": {
+      "research": 8.0,
+      "open": 19.57
+     },
+     "qa_times": [
+      480.027,
+      491.597
+     ]
+    },
+    {
+     "id": "recap",
+     "section": "recap",
+     "kind": "recap",
+     "start": 501.728,
+     "end": 521.0,
+     "title": "回顧",
+     "screen": "每一步，都讓人更容易把想法交給電腦",
+     "objective": "回收全片：語言演進的方向，以及選語言前先問要解決的問題。",
+     "narration": "從 0 與 1，到組合語言、高階語言，再到 AI。每一步，都是讓人更容易把想法交給電腦。選擇語言時，先問：你要解決什麼問題？",
+     "phases": [
+      {
+       "name": "s9a",
+       "start": 501.728,
+       "end": 521.0
+      }
+     ],
+     "marks": {
+      "n2": 2.56,
+      "n3": 3.98,
+      "n4": 4.9,
+      "ask": 10.5
+     },
+     "qa_times": [
+      504.288,
+      505.708,
+      506.628,
+      512.228
+     ]
+    },
+    {
+     "id": "credit",
+     "section": "credit",
+     "kind": "credit",
+     "start": 521.0,
+     "end": 524.0,
+     "title": "",
+     "screen": "李振偉老師",
+     "narration": "",
+     "phases": [
+      {
+       "name": "署名",
+       "start": 521.0,
+       "end": 524.0
+      }
+     ],
+     "qa_times": []
+    }
+   ],
+   "subtitles": {
+    "reviewed": true,
+    "timing_source": "Gemini audio: faster-whisper word timestamps mapped to approved script chunks, edges snapped to the narration energy envelope; spot-checked against screenshots",
+    "cues": [
+     {
+      "start": 0.74,
+      "end": 4.12,
+      "text": [
+       "電腦其實只看得懂 0 和 1。",
+       "A computer only understands ones and zeros."
+      ]
+     },
+     {
+      "start": 4.12,
+      "end": 7.83,
+      "text": [
+       "那為什麼世界上會有上千種程式語言？",
+       "So why are there thousands of programming languages?"
+      ]
+     },
+     {
+      "start": 8.72,
+      "end": 12.75,
+      "text": [
+       "因為每一種語言，都是人類為了解決某個問題，",
+       "Because every language is a kind of translation,"
+      ]
+     },
+     {
+      "start": 12.75,
+      "end": 15.64,
+      "text": [
+       "而發明的翻譯方式。",
+       "invented to solve a particular problem."
+      ]
+     },
+     {
+      "start": 15.64,
+      "end": 18.85,
+      "text": [
+       "今天，我們走一趟七十年的旅程。",
+       "Today, let's take a seventy-year journey."
+      ]
+     },
+     {
+      "start": 23.86,
+      "end": 28.12,
+      "text": [
+       "最早的程式設計師，直接用機器碼寫程式：",
+       "The first programmers wrote raw machine code:"
+      ]
+     },
+     {
+      "start": 28.12,
+      "end": 33.9,
+      "text": [
+       "一長串的 0 與 1，寫錯一位，整個程式就出錯。",
+       "long strings of ones and zeros, where a single wrong bit could break everything."
+      ]
+     },
+     {
+      "start": 33.9,
+      "end": 36.12,
+      "text": [
+       "接著出現組合語言，",
+       "Then came assembly language,"
+      ]
+     },
+     {
+      "start": 36.12,
+      "end": 41.62,
+      "text": [
+       "用 ADD、MOV 這樣的簡短代號，取代難記的數字。",
+       "which replaced numbers with short codes like ADD and MOV."
+      ]
+     },
+     {
+      "start": 41.62,
+      "end": 45.06,
+      "text": [
+       "但它仍然綁死在特定的機器上。",
+       "But it was still tied to one specific machine."
+      ]
+     },
+     {
+      "start": 45.06,
+      "end": 47.262,
+      "text": [
+       "真正的轉捩點在 1957 年。",
+       "The real turning point came in 1957."
+      ]
+     },
+     {
+      "start": 47.262,
+      "end": 52.04,
+      "text": [
+       "IBM 的約翰．巴克斯團隊推出 FORTRAN，",
+       "John Backus's team at IBM released FORTRAN."
+      ]
+     },
+     {
+      "start": 52.04,
+      "end": 55.98,
+      "text": [
+       "工程師第一次能用接近數學式的寫法，",
+       "For the first time, engineers could write formulas almost like math,"
+      ]
+     },
+     {
+      "start": 55.98,
+      "end": 59.72,
+      "text": [
+       "再由編譯器自動翻譯成機器碼。",
+       "and a compiler translated them into machine code automatically."
+      ]
+     },
+     {
+      "start": 59.72,
+      "end": 62.94,
+      "text": [
+       "這就是高階程式語言的起點：",
+       "This was the beginning of high-level languages:"
+      ]
+     },
+     {
+      "start": 62.94,
+      "end": 67.59,
+      "text": [
+       "讓人用人的方式思考，把翻譯工作交給電腦。",
+       "people think in human terms, and the computer handles the translation."
+      ]
+     },
+     {
+      "start": 72.46,
+      "end": 76.52,
+      "text": [
+       "高階語言是怎麼變成電腦能執行的指令？",
+       "So how does a high-level language become instructions a computer can run?"
+      ]
+     },
+     {
+      "start": 76.52,
+      "end": 78.37,
+      "text": [
+       "我們拿一行程式來拆解。",
+       "Let's take apart a single line of code."
+      ]
+     },
+     {
+      "start": 79.34,
+      "end": 81.44,
+      "text": [
+       "第一種方式是編譯。",
+       "The first approach is compiling."
+      ]
+     },
+     {
+      "start": 81.44,
+      "end": 84.053,
+      "text": [
+       "像 C 與 Rust，會在執行前",
+       "Languages like C and Rust translate the whole program"
+      ]
+     },
+     {
+      "start": 84.053,
+      "end": 87.78,
+      "text": [
+       "把整份程式，一次翻譯成機器碼。",
+       "into machine code before it runs."
+      ]
+     },
+     {
+      "start": 87.78,
+      "end": 91.47,
+      "text": [
+       "執行很快，但每次修改都要重新編譯。",
+       "The result is fast, but every change means compiling again."
+      ]
+     },
+     {
+      "start": 92.38,
+      "end": 94.58,
+      "text": [
+       "第二種方式是直譯。",
+       "The second approach is interpreting."
+      ]
+     },
+     {
+      "start": 94.58,
+      "end": 98.64,
+      "text": [
+       "像 Python，由直譯器一邊讀、一邊執行，",
+       "In Python, an interpreter reads and runs the code as it goes."
+      ]
+     },
+     {
+      "start": 98.64,
+      "end": 102.87,
+      "text": [
+       "修改後馬上能看到結果，代價是通常比較慢。",
+       "You see results right away, but it is usually slower."
+      ]
+     },
+     {
+      "start": 103.84,
+      "end": 105.44,
+      "text": [
+       "Java 和 C# 走中間路線：",
+       "Java and C# take a middle path."
+      ]
+     },
+     {
+      "start": 105.44,
+      "end": 109.693,
+      "text": [
+       "先編譯成中間碼，再交給虛擬機器，",
+       "They compile to an intermediate bytecode, then a virtual machine runs it,"
+      ]
+     },
+     {
+      "start": 109.693,
+      "end": 116.23,
+      "text": [
+       "執行時把常用的部分即時編譯，兼顧可攜性與速度。",
+       "compiling hot spots on the fly. That balances portability and speed."
+      ]
+     },
+     {
+      "start": 117.18,
+      "end": 118.84,
+      "text": [
+       "記住這個取捨：",
+       "Remember the trade-off:"
+      ]
+     },
+     {
+      "start": 118.84,
+      "end": 122.62,
+      "text": [
+       "抽象層級越高，越好寫、越安全；",
+       "the higher the abstraction, the easier and safer the code."
+      ]
+     },
+     {
+      "start": 122.62,
+      "end": 125.66,
+      "text": [
+       "越接近硬體，越能掌控效能，",
+       "The closer to the hardware, the more control over performance,"
+      ]
+     },
+     {
+      "start": 125.66,
+      "end": 127.25,
+      "text": [
+       "但責任也越大。",
+       "and the more responsibility."
+      ]
+     },
+     {
+      "start": 132.42,
+      "end": 135.32,
+      "text": [
+       "把七十年攤開在時間軸上。",
+       "Let's lay seventy years out on a timeline."
+      ]
+     },
+     {
+      "start": 135.32,
+      "end": 138.055,
+      "text": [
+       "1950 年代，FORTRAN 負責科學計算，",
+       "In the 1950s, FORTRAN handled scientific computing,"
+      ]
+     },
+     {
+      "start": 138.055,
+      "end": 143.17,
+      "text": [
+       "LISP 開啟人工智慧研究，COBOL 處理商業資料。",
+       "LISP launched AI research, and COBOL processed business data."
+      ]
+     },
+     {
+      "start": 144.18,
+      "end": 149.58,
+      "text": [
+       "1972 年，貝爾實驗室的丹尼斯．里奇設計出 C 語言，",
+       "In 1972, Dennis Ritchie at Bell Labs created C"
+      ]
+     },
+     {
+      "start": 149.58,
+      "end": 152.3,
+      "text": [
+       "用來撰寫 Unix 作業系統。",
+       "to build the Unix operating system."
+      ]
+     },
+     {
+      "start": 152.3,
+      "end": 157.54,
+      "text": [
+       "兩年後，IBM 發表了查詢資料庫的 SQL 前身。",
+       "Two years later, IBM introduced the forerunner of SQL for querying databases."
+      ]
+     },
+     {
+      "start": 157.54,
+      "end": 160.5,
+      "text": [
+       "1980 年代，物件導向興起：",
+       "The 1980s brought object-oriented programming."
+      ]
+     },
+     {
+      "start": 160.5,
+      "end": 165.97,
+      "text": [
+       "C++ 在 C 的基礎上加入類別，讓大型軟體更容易組織。",
+       "C++ added classes on top of C, making large software easier to organize."
+      ]
+     },
+     {
+      "start": 166.84,
+      "end": 171.22,
+      "text": [
+       "1990 年代，個人電腦與網際網路爆發：",
+       "In the 1990s, personal computers and the internet exploded."
+      ]
+     },
+     {
+      "start": 171.22,
+      "end": 174.08,
+      "text": [
+       "Python、Visual Basic、R、",
+       "Python, Visual Basic, R,"
+      ]
+     },
+     {
+      "start": 174.08,
+      "end": 177.83,
+      "text": [
+       "Java 和 JavaScript 都在這十年誕生。",
+       "Java, and JavaScript were all born in that decade."
+      ]
+     },
+     {
+      "start": 178.74,
+      "end": 181.415,
+      "text": [
+       "進入新世紀，微軟推出 C#；",
+       "In the new century, Microsoft launched C#."
+      ]
+     },
+     {
+      "start": 181.415,
+      "end": 184.06,
+      "text": [
+       "2015 年，Rust 發布 1.0，",
+       "In 2015, Rust reached version 1.0,"
+      ]
+     },
+     {
+      "start": 184.06,
+      "end": 187.775,
+      "text": [
+       "主打不需要垃圾回收的記憶體安全。",
+       "promising memory safety without a garbage collector."
+      ]
+     },
+     {
+      "start": 187.775,
+      "end": 192.43,
+      "text": [
+       "到了 2020 年代，AI 成為新的推力。",
+       "And in the 2020s, AI became the new driving force."
+      ]
+     },
+     {
+      "start": 197.96,
+      "end": 201.38,
+      "text": [
+       "這麼多語言，哪些最多人用？",
+       "With so many languages, which are the most popular?"
+      ]
+     },
+     {
+      "start": 201.38,
+      "end": 204.52,
+      "text": [
+       "TIOBE 指數每個月統計一次，",
+       "The TIOBE Index updates every month,"
+      ]
+     },
+     {
+      "start": 204.52,
+      "end": 208.34,
+      "text": [
+       "計算各語言在 Google、Bing、維基百科",
+       "counting results for each language across more than twenty sources,"
+      ]
+     },
+     {
+      "start": 208.34,
+      "end": 211.29,
+      "text": [
+       "等二十多個搜尋來源的相關結果。",
+       "including Google, Bing, and Wikipedia."
+      ]
+     },
+     {
+      "start": 212.1,
+      "end": 216.62,
+      "text": [
+       "要注意，它反映的是熱門程度與學習資源，",
+       "Keep in mind that it reflects popularity and available resources,"
+      ]
+     },
+     {
+      "start": 216.62,
+      "end": 220.46,
+      "text": [
+       "不是語言的好壞，也不是程式碼的數量。",
+       "not quality, and not the amount of code written."
+      ]
+     },
+     {
+      "start": 220.46,
+      "end": 223.83,
+      "text": [
+       "以下採用 2026 年 9 月的榜單。",
+       "We'll use the September 2026 rankings."
+      ]
+     },
+     {
+      "start": 228.56,
+      "end": 232.92,
+      "text": [
+       "把前十名放回它們誕生的年代，會發現一件事：",
+       "Place today's top ten back on the timeline, and something stands out:"
+      ]
+     },
+     {
+      "start": 232.92,
+      "end": 235.86,
+      "text": [
+       "1972 年的 C 依然排第二，",
+       "C, born in 1972, is still number two,"
+      ]
+     },
+     {
+      "start": 235.86,
+      "end": 239.15,
+      "text": [
+       "而最年輕的 Rust，已經擠進第十名。",
+       "while Rust, the youngest, has climbed into tenth place."
+      ]
+     },
+     {
+      "start": 244.36,
+      "end": 248.6,
+      "text": [
+       "第一名 Python，市占約 17.8%。",
+       "Number one is Python, with about 17.8 percent."
+      ]
+     },
+     {
+      "start": 248.6,
+      "end": 251.42,
+      "text": [
+       "語法簡潔，加上豐富的套件，",
+       "Its clean syntax and huge library ecosystem"
+      ]
+     },
+     {
+      "start": 251.42,
+      "end": 254.41,
+      "text": [
+       "是資料科學與 AI 的共同語言。",
+       "make it the shared language of data science and AI."
+      ]
+     },
+     {
+      "start": 255.64,
+      "end": 258.66,
+      "text": [
+       "第二名 C，約 10.3%。",
+       "Number two is C, at about 10.3 percent."
+      ]
+     },
+     {
+      "start": 258.66,
+      "end": 265.03,
+      "text": [
+       "作業系統、嵌入式裝置與驅動程式，至今仍大量依賴它。",
+       "Operating systems, embedded devices, and drivers still rely on it heavily."
+      ]
+     },
+     {
+      "start": 266.32,
+      "end": 270.48,
+      "text": [
+       "第三名 C++，約 8.7%。",
+       "Number three is C++, at about 8.7 percent."
+      ]
+     },
+     {
+      "start": 270.48,
+      "end": 274.5,
+      "text": [
+       "遊戲引擎、瀏覽器與高頻交易系統，",
+       "Game engines, web browsers, and high-frequency trading systems"
+      ]
+     },
+     {
+      "start": 274.5,
+      "end": 276.73,
+      "text": [
+       "需要它的速度與控制力。",
+       "depend on its speed and control."
+      ]
+     },
+     {
+      "start": 277.92,
+      "end": 281.38,
+      "text": [
+       "第四名 Java，約 7.5%。",
+       "Number four is Java, at about 7.5 percent."
+      ]
+     },
+     {
+      "start": 281.38,
+      "end": 284.22,
+      "text": [
+       "一次編寫、到處執行，",
+       "Write once, run anywhere:"
+      ]
+     },
+     {
+      "start": 284.22,
+      "end": 287.43,
+      "text": [
+       "撐起大量企業後端與 Android 應用。",
+       "it powers countless enterprise back ends and Android apps."
+      ]
+     },
+     {
+      "start": 288.62,
+      "end": 290.56,
+      "text": [
+       "第五名 C#，約 4.2%。",
+       "Number five is C sharp, at about 4.2 percent."
+      ]
+     },
+     {
+      "start": 290.56,
+      "end": 293.22,
+      "text": [
+       "微軟的主力語言，",
+       "Microsoft's flagship language,"
+      ]
+     },
+     {
+      "start": 293.22,
+      "end": 298.75,
+      "text": [
+       "常見於 Windows 應用、雲端服務與 Unity 遊戲開發。",
+       "common in Windows apps, cloud services, and Unity game development."
+      ]
+     },
+     {
+      "start": 300.0,
+      "end": 303.82,
+      "text": [
+       "第六名 JavaScript，約 2.8%。",
+       "Number six is JavaScript, at about 2.8 percent."
+      ]
+     },
+     {
+      "start": 303.82,
+      "end": 306.14,
+      "text": [
+       "它是瀏覽器內建的語言，",
+       "It is built into every web browser,"
+      ]
+     },
+     {
+      "start": 306.14,
+      "end": 308.69,
+      "text": [
+       "幾乎每個網頁的互動都靠它。",
+       "and drives the interactivity of almost every web page."
+      ]
+     },
+     {
+      "start": 309.92,
+      "end": 314.74,
+      "text": [
+       "第七名 Visual Basic，約 2.6%。",
+       "Number seven is Visual Basic, at about 2.6 percent."
+      ]
+     },
+     {
+      "start": 314.74,
+      "end": 319.13,
+      "text": [
+       "在 Office 自動化與企業舊系統中，依然常見。",
+       "It remains common in Office automation and older business systems."
+      ]
+     },
+     {
+      "start": 320.3,
+      "end": 325.18,
+      "text": [
+       "第八名 SQL，約 2.2%。",
+       "Number eight is SQL, at about 2.2 percent."
+      ]
+     },
+     {
+      "start": 325.18,
+      "end": 330.27,
+      "text": [
+       "它不寫應用程式，而是專門向資料庫查詢與管理資料。",
+       "It isn't used to build apps; it is used to query and manage data in databases."
+      ]
+     },
+     {
+      "start": 331.5,
+      "end": 334.76,
+      "text": [
+       "第九名 R，約 1.7%。",
+       "Number nine is R, at about 1.7 percent."
+      ]
+     },
+     {
+      "start": 334.76,
+      "end": 337.28,
+      "text": [
+       "由統計學家設計，",
+       "Designed by statisticians,"
+      ]
+     },
+     {
+      "start": 337.28,
+      "end": 340.25,
+      "text": [
+       "擅長統計分析與資料視覺化。",
+       "it excels at statistical analysis and data visualization."
+      ]
+     },
+     {
+      "start": 341.58,
+      "end": 345.54,
+      "text": [
+       "第十名 Rust，約 1.3%。",
+       "Number ten is Rust, at about 1.3 percent."
+      ]
+     },
+     {
+      "start": 345.54,
+      "end": 348.58,
+      "text": [
+       "在編譯時就檢查記憶體錯誤，",
+       "It catches memory errors at compile time,"
+      ]
+     },
+     {
+      "start": 348.58,
+      "end": 351.75,
+      "text": [
+       "正逐步進入作業系統與基礎設施。",
+       "and is steadily moving into operating systems and infrastructure."
+      ]
+     },
+     {
+      "start": 356.56,
+      "end": 359.94,
+      "text": [
+       "把十種語言放在同一張表比較：",
+       "Compare all ten on the same table:"
+      ]
+     },
+     {
+      "start": 359.94,
+      "end": 363.96,
+      "text": [
+       "執行方式、記憶體管理、型別檢查，",
+       "how they run, how they manage memory, and how they check types."
+      ]
+     },
+     {
+      "start": 363.96,
+      "end": 366.23,
+      "text": [
+       "決定了它們各自擅長的戰場。",
+       "Those choices shape where each one shines."
+      ]
+     },
+     {
+      "start": 367.22,
+      "end": 373.14,
+      "text": [
+       "C 與 C++ 手動管理記憶體，速度快但容易出錯；",
+       "C and C++ manage memory by hand: fast, but error-prone."
+      ]
+     },
+     {
+      "start": 373.14,
+      "end": 378.512,
+      "text": [
+       "Java、C#、Python 用垃圾回收，安全但多一點負擔；",
+       "Java, C sharp, and Python use garbage collection: safer, with some overhead."
+      ]
+     },
+     {
+      "start": 378.512,
+      "end": 383.95,
+      "text": [
+       "Rust 用所有權規則，在編譯時就把關。",
+       "Rust uses ownership rules, enforced at compile time."
+      ]
+     },
+     {
+      "start": 389.3,
+      "end": 391.2,
+      "text": [
+       "來看一個真實案例。",
+       "Here's a real case."
+      ]
+     },
+     {
+      "start": 391.2,
+      "end": 395.88,
+      "text": [
+       "Android 的大量系統程式碼用 C 與 C++ 撰寫，",
+       "Much of Android's system code is written in C and C++."
+      ]
+     },
+     {
+      "start": 395.88,
+      "end": 401.15,
+      "text": [
+       "2019 年，記憶體安全漏洞占所有漏洞的 76%。",
+       "In 2019, memory safety bugs made up 76 percent of its vulnerabilities."
+      ]
+     },
+     {
+      "start": 402.06,
+      "end": 404.78,
+      "text": [
+       "Google 的做法不是全部重寫，",
+       "Google's approach was not to rewrite everything,"
+      ]
+     },
+     {
+      "start": 404.78,
+      "end": 407.093,
+      "text": [
+       "而是讓新程式碼優先使用",
+       "but to write new code"
+      ]
+     },
+     {
+      "start": 407.093,
+      "end": 410.73,
+      "text": [
+       "Rust、Kotlin 這類記憶體安全的語言。",
+       "in memory-safe languages such as Rust and Kotlin."
+      ]
+     },
+     {
+      "start": 411.6,
+      "end": 416.42,
+      "text": [
+       "到了 2024 年，這個比例降到 24%。",
+       "By 2024, that share had fallen to 24 percent."
+      ]
+     },
+     {
+      "start": 416.42,
+      "end": 420.263,
+      "text": [
+       "限制是：舊的 C 與 C++ 程式碼仍然存在，",
+       "The limits: older C and C++ code still exists,"
+      ]
+     },
+     {
+      "start": 420.263,
+      "end": 424.55,
+      "text": [
+       "不同語言之間的銜接，也需要額外成本。",
+       "and connecting different languages adds extra cost."
+      ]
+     },
+     {
+      "start": 429.8,
+      "end": 431.98,
+      "text": [
+       "那 AI 時代的語言呢？",
+       "What about languages for the AI era?"
+      ]
+     },
+     {
+      "start": 431.98,
+      "end": 433.975,
+      "text": [
+       "目前 AI 的主力仍是 Python，",
+       "Python is still the main language of AI,"
+      ]
+     },
+     {
+      "start": 433.975,
+      "end": 440.15,
+      "text": [
+       "但真正的大量運算，多半交給底層的 C++ 與 GPU 程式。",
+       "but the heavy computation usually runs in C++ and GPU code underneath."
+      ]
+     },
+     {
+      "start": 441.24,
+      "end": 444.18,
+      "text": [
+       "Mojo 想把兩者合而為一。",
+       "Mojo aims to combine the two."
+      ]
+     },
+     {
+      "start": 444.18,
+      "end": 447.44,
+      "text": [
+       "它在 2023 年由 Modular 公司發表，",
+       "Announced by Modular in 2023,"
+      ]
+     },
+     {
+      "start": 447.44,
+      "end": 452.56,
+      "text": [
+       "語法接近 Python，卻能直接為 CPU 與 GPU 編譯；",
+       "it looks like Python but compiles directly for CPUs and GPUs."
+      ]
+     },
+     {
+      "start": 452.56,
+      "end": 456.47,
+      "text": [
+       "2026 年 8 月推出第一個穩定版 1.0。",
+       "Its first stable release, version 1.0, arrived in August 2026."
+      ]
+     },
+     {
+      "start": 457.3,
+      "end": 462.92,
+      "text": [
+       "另一個變化是：自然語言本身，正在成為寫程式的介面。",
+       "Another shift: natural language itself is becoming an interface for programming."
+      ]
+     },
+     {
+      "start": 462.92,
+      "end": 467.87,
+      "text": [
+       "開發者用文字描述需求，再由 AI 助手產生程式碼。",
+       "Developers describe what they want in words, and AI assistants generate the code."
+      ]
+     },
+     {
+      "start": 472.94,
+      "end": 475.487,
+      "text": [
+       "展望未來，Modular 已宣布",
+       "Looking ahead, Modular has announced"
+      ]
+     },
+     {
+      "start": 475.487,
+      "end": 480.0,
+      "text": [
+       "將在 2026 年開放 Mojo 編譯器原始碼；",
+       "it will open-source the Mojo compiler in 2026,"
+      ]
+     },
+     {
+      "start": 480.0,
+      "end": 481.42,
+      "text": [
+       "學界也正研究",
+       "and researchers are exploring programming languages"
+      ]
+     },
+     {
+      "start": 481.42,
+      "end": 485.05,
+      "text": [
+       "專為大型語言模型設計的程式語言。",
+       "designed for large language models."
+      ]
+     },
+     {
+      "start": 485.94,
+      "end": 486.9,
+      "text": [
+       "我們推測，",
+       "Our inference: engineers will spend more time"
+      ]
+     },
+     {
+      "start": 486.9,
+      "end": 491.64,
+      "text": [
+       "工程師會花更多時間描述需求與驗證結果；",
+       "specifying requirements and verifying results."
+      ]
+     },
+     {
+      "start": 491.64,
+      "end": 497.47,
+      "text": [
+       "而 AI 產生的程式碼是否正確、安全，仍是尚未解決的問題。",
+       "Whether AI-generated code is correct and secure remains an open problem."
+      ]
+     },
+     {
+      "start": 502.62,
+      "end": 508.02,
+      "text": [
+       "從 0 與 1，到組合語言、高階語言，再到 AI。",
+       "From ones and zeros, to assembly, to high-level languages, and now AI,"
+      ]
+     },
+     {
+      "start": 508.02,
+      "end": 512.24,
+      "text": [
+       "每一步，都是讓人更容易把想法交給電腦。",
+       "each step makes it easier to hand our ideas to a computer."
+      ]
+     },
+     {
+      "start": 512.24,
+      "end": 516.13,
+      "text": [
+       "選擇語言時，先問：你要解決什麼問題？",
+       "When choosing a language, start by asking: what problem are you solving?"
+      ]
+     }
+    ]
+   }
+  },
+  "en-US": {
+   "mix": "audio/en-US-mix.m4a",
+   "scenes": [
+    {
+     "id": "hook",
+     "section": "hook",
+     "kind": "hook",
+     "start": 0.0,
+     "end": 19.725,
+     "title": "70 Years of Programming Languages",
+     "screen": "From ones and zeros to AI",
+     "objective": "引發問題：電腦只懂 0/1，為何會有上千種語言？",
+     "narration": "A computer only understands ones and zeros. So why are there thousands of programming languages? Because every language is a kind of translation, invented to solve a particular problem. Today, let's take a seventy-year journey.",
+     "phases": [
+      {
+       "name": "s0a",
+       "start": 0.0,
+       "end": 7.98
+      },
+      {
+       "name": "s0b",
+       "start": 7.98,
+       "end": 19.725
+      }
+     ],
+     "marks": {
+      "thousands": 5.32,
+      "journey": 15.03
+     },
+     "qa_times": [
+      5.32,
+      15.03
+     ],
+     "hide_header": true
+    },
+    {
+     "id": "origin",
+     "section": "origin",
+     "kind": "origin",
+     "start": 19.725,
+     "end": 68.97,
+     "title": "Origins: from bits to FORTRAN",
+     "screen": "1957: IBM releases FORTRAN",
+     "objective": "說出機器碼 → 組合語言 → 高階語言的轉變，以及 1957 年 FORTRAN 的意義。",
+     "narration": "The first programmers wrote raw machine code: long strings of ones and zeros, where a single wrong bit could break everything. Then came assembly language, which replaced numbers with short codes like ADD and MOV. But it was still tied to one specific machine. The real turning point came in 1957. John Backus's team at IBM released FORTRAN. For the first time, engineers could write formulas almost like math, and a compiler translated them into machine code automatically. This was the beginning of high-level languages: people think in human terms, and the computer handles the translation.",
+     "phases": [
+      {
+       "name": "s1a",
+       "start": 19.725,
+       "end": 30.165
+      },
+      {
+       "name": "s1b",
+       "start": 30.165,
+       "end": 41.695
+      },
+      {
+       "name": "s1c",
+       "start": 41.695,
+       "end": 59.665
+      },
+      {
+       "name": "s1d",
+       "start": 59.665,
+       "end": 68.97
+      }
+     ],
+     "marks": {
+      "bit": 7.24,
+      "machine": 19.43,
+      "y1957": 24.34,
+      "formula": 32.74,
+      "compiler": 35.46,
+      "human": 43.55
+     },
+     "qa_times": [
+      26.965,
+      39.155,
+      44.065,
+      52.465,
+      55.185,
+      63.275
+     ],
+     "spoken_date": "1957"
+    },
+    {
+     "id": "principle",
+     "section": "principle",
+     "kind": "ladder",
+     "start": 68.97,
+     "end": 131.185,
+     "title": "How does one line of code run?",
+     "screen": "Compiled · Interpreted · Virtual machine",
+     "objective": "分辨編譯、直譯、虛擬機器＋JIT 的流程，並理解抽象層級與效能掌控的取捨。",
+     "narration": "So how does a high-level language become instructions a computer can run? Let's take apart a single line of code. The first approach is compiling. Languages like C and Rust translate the whole program into machine code before it runs. The result is fast, but every change means compiling again. The second approach is interpreting. In Python, an interpreter reads and runs the code as it goes. You see results right away, but it is usually slower. Java and C# take a middle path. They compile to an intermediate bytecode, then a virtual machine runs it, compiling hot spots on the fly. That balances portability and speed. Remember the trade-off: the higher the abstraction, the easier and safer the code. The closer to the hardware, the more control over performance, and the more responsibility.",
+     "phases": [
+      {
+       "name": "s2a",
+       "start": 68.97,
+       "end": 78.51
+      },
+      {
+       "name": "s2b",
+       "start": 78.51,
+       "end": 92.46
+      },
+      {
+       "name": "s2c",
+       "start": 92.46,
+       "end": 103.85
+      },
+      {
+       "name": "s2d",
+       "start": 103.85,
+       "end": 117.52
+      },
+      {
+       "name": "s2e",
+       "start": 117.52,
+       "end": 131.185
+      }
+     ],
+     "marks": {
+      "fast": 19.53,
+      "instant": 31.78,
+      "jit": 43.73,
+      "closer": 54.62
+     },
+     "qa_times": [
+      88.5,
+      100.75,
+      112.7,
+      123.59
+     ]
+    },
+    {
+     "id": "history",
+     "section": "history",
+     "kind": "timeline",
+     "start": 131.185,
+     "end": 199.68,
+     "title": "Seventy years on one timeline",
+     "screen": "Each era brought new problems to solve",
+     "objective": "依時間順序說出主要語言誕生的年代與當時要解決的問題。",
+     "narration": "Let's lay seventy years out on a timeline. In the 1950s, FORTRAN handled scientific computing, LISP launched AI research, and COBOL processed business data. In 1972, Dennis Ritchie at Bell Labs created C to build the Unix operating system. Two years later, IBM introduced the forerunner of SQL for querying databases. The 1980s brought object-oriented programming. C++ added classes on top of C, making large software easier to organize. In the 1990s, personal computers and the internet exploded. Python, Visual Basic, R, Java, and JavaScript were all born in that decade. In the new century, Microsoft launched C#. In 2015, Rust reached version 1.0, promising memory safety without a garbage collector. And in the 2020s, AI became the new driving force.",
+     "phases": [
+      {
+       "name": "s3a",
+       "start": 131.185,
+       "end": 144.635
+      },
+      {
+       "name": "s3b",
+       "start": 144.635,
+       "end": 158.775
+      },
+      {
+       "name": "s3c",
+       "start": 158.775,
+       "end": 169.675
+      },
+      {
+       "name": "s3d",
+       "start": 169.675,
+       "end": 182.175
+      },
+      {
+       "name": "s3e",
+       "start": 182.175,
+       "end": 199.68
+      }
+     ],
+     "marks": {
+      "fortran": 5.6,
+      "lisp": 8.36,
+      "cobol": 10.84,
+      "c": 17.36,
+      "sql": 24.5,
+      "cpp": 29.28,
+      "python": 43.64,
+      "vb": 44.7,
+      "r": 40.3,
+      "java": 46.8,
+      "js": 47.74,
+      "csharp": 51.88,
+      "rust": 56.3,
+      "ai": 63.84,
+      "aiera": 62.64
+     },
+     "qa_times": [
+      136.785,
+      139.545,
+      142.025,
+      148.545,
+      155.685,
+      160.465,
+      171.485,
+      174.825,
+      175.885,
+      177.985,
+      178.925,
+      183.065,
+      187.485,
+      193.825,
+      195.025
+     ]
+    },
+    {
+     "id": "tiobe",
+     "section": "comparison",
+     "kind": "tiobe",
+     "start": 199.68,
+     "end": 227.425,
+     "title": "How does the TIOBE Index work?",
+     "screen": "Updated monthly | popularity, not quality",
+     "objective": "說明 TIOBE 指數的計算來源，以及它不能代表的事。",
+     "narration": "With so many languages, which are the most popular? The TIOBE Index updates every month, counting results for each language across more than twenty sources, including Google, Bing, and Wikipedia. Keep in mind that it reflects popularity and available resources, not quality, and not the amount of code written. We'll use the September 2026 rankings.",
+     "phases": [
+      {
+       "name": "s4a",
+       "start": 199.68,
+       "end": 215.16
+      },
+      {
+       "name": "s4b",
+       "start": 215.16,
+       "end": 227.425
+      }
+     ],
+     "marks": {
+      "monthly": 6.74,
+      "google": 12.46,
+      "notq": 20.01,
+      "sep": 24.03
+     },
+     "qa_times": [
+      206.42,
+      212.14,
+      219.69,
+      223.71
+     ],
+     "eyebrow": "comparison"
+    },
+    {
+     "id": "top10-morph",
+     "section": "comparison",
+     "kind": "morph",
+     "start": 227.425,
+     "end": 243.56,
+     "title": "Today's top 10, back on the timeline",
+     "screen": "Birth year × TIOBE rank, September 2026",
+     "objective": "看出誕生年份與今日排名沒有直接關係：老語言 C 仍居前列，新語言 Rust 已進榜。",
+     "narration": "Place today's top ten back on the timeline, and something stands out: C, born in 1972, is still number two, while Rust, the youngest, has climbed into tenth place.",
+     "phases": [
+      {
+       "name": "落點",
+       "start": 227.425,
+       "end": 231.555
+      },
+      {
+       "name": "變形",
+       "start": 231.555,
+       "end": 233.215
+      },
+      {
+       "name": "聚焦C",
+       "start": 233.215,
+       "end": 237.835
+      },
+      {
+       "name": "聚焦Rust",
+       "start": 237.835,
+       "end": 241.825
+      },
+      {
+       "name": "停留",
+       "start": 241.825,
+       "end": 243.56
+      }
+     ],
+     "marks": {
+      "something": 4.28,
+      "c1972": 5.94,
+      "rustf": 10.56
+     },
+     "qa_times": [
+      231.705,
+      233.365,
+      237.985
+     ]
+    },
+    {
+     "id": "top10-cards",
+     "section": "comparison",
+     "kind": "cards",
+     "start": 243.56,
+     "end": 362.895,
+     "title": "The top 10, one by one",
+     "screen": "September 2026 | rating = share of search results",
+     "objective": "依序說出前 10 名語言的評分、誕生年、執行方式與代表用途。",
+     "narration": "Number one is Python, with about 17.8 percent. Its clean syntax and huge library ecosystem make it the shared language of data science and AI. Number two is C, at about 10.3 percent. Operating systems, embedded devices, and drivers still rely on it heavily. Number three is C++, at about 8.7 percent. Game engines, web browsers, and high-frequency trading systems depend on its speed and control. Number four is Java, at about 7.5 percent. Write once, run anywhere: it powers countless enterprise back ends and Android apps. Number five is C sharp, at about 4.2 percent. Microsoft's flagship language, common in Windows apps, cloud services, and Unity game development. Number six is JavaScript, at about 2.8 percent. It is built into every web browser, and drives the interactivity of almost every web page. Number seven is Visual Basic, at about 2.6 percent. It remains common in Office automation and older business systems. Number eight is SQL, at about 2.2 percent. It isn't used to build apps; it is used to query and manage data in databases. Number nine is R, at about 1.7 percent. Designed by statisticians, it excels at statistical analysis and data visualization. Number ten is Rust, at about 1.3 percent. It catches memory errors at compile time, and is steadily moving into operating systems and infrastructure.",
+     "phases": [
+      {
+       "name": "s5b",
+       "start": 243.56,
+       "end": 257.75
+      },
+      {
+       "name": "s5c",
+       "start": 257.75,
+       "end": 268.33
+      },
+      {
+       "name": "s5d",
+       "start": 268.33,
+       "end": 280.55
+      },
+      {
+       "name": "s5e",
+       "start": 280.55,
+       "end": 292.37
+      },
+      {
+       "name": "s5f",
+       "start": 292.37,
+       "end": 304.83
+      },
+      {
+       "name": "s5g",
+       "start": 304.83,
+       "end": 316.77
+      },
+      {
+       "name": "s5h",
+       "start": 316.77,
+       "end": 327.27
+      },
+      {
+       "name": "s5i",
+       "start": 327.27,
+       "end": 338.41
+      },
+      {
+       "name": "s5j",
+       "start": 338.41,
+       "end": 349.59
+      },
+      {
+       "name": "s5k",
+       "start": 349.59,
+       "end": 362.895
+      }
+     ],
+     "marks": {},
+     "qa_times": []
+    },
+    {
+     "id": "compare",
+     "section": "comparison",
+     "kind": "compare",
+     "start": 362.895,
+     "end": 393.79,
+     "title": "All ten on one table",
+     "screen": "Execution × memory × type checking",
+     "objective": "用相同三個維度比較十種語言，理解記憶體管理方式造成的取捨。",
+     "narration": "Compare all ten on the same table: how they run, how they manage memory, and how they check types. Those choices shape where each one shines. C and C++ manage memory by hand: fast, but error-prone. Java, C sharp, and Python use garbage collection: safer, with some overhead. Rust uses ownership rules, enforced at compile time.",
+     "phases": [
+      {
+       "name": "s5l",
+       "start": 362.895,
+       "end": 374.605
+      },
+      {
+       "name": "s5m",
+       "start": 374.605,
+       "end": 393.79
+      }
+     ],
+     "marks": {
+      "run": 3.66,
+      "memory": 5.16,
+      "types": 7.1,
+      "gc": 17.9,
+      "own": 24.6
+     },
+     "qa_times": [
+      366.555,
+      368.055,
+      369.995,
+      380.795,
+      387.495
+     ]
+    },
+    {
+     "id": "case",
+     "section": "application",
+     "kind": "case",
+     "start": 393.79,
+     "end": 430.625,
+     "title": "Case study: Android moves to memory-safe languages",
+     "screen": "Source: Google Security Blog, 2024-09-25",
+     "objective": "以問題 → 做法 → 結果 → 限制，說明語言選擇如何影響軟體安全。",
+     "narration": "Here's a real case. Much of Android's system code is written in C and C++. In 2019, memory safety bugs made up 76 percent of its vulnerabilities. Google's approach was not to rewrite everything, but to write new code in memory-safe languages such as Rust and Kotlin. By 2024, that share had fallen to 24 percent. The limits: older C and C++ code still exists, and connecting different languages adds extra cost.",
+     "phases": [
+      {
+       "name": "s6a",
+       "start": 393.79,
+       "end": 407.33
+      },
+      {
+       "name": "s6b",
+       "start": 407.33,
+       "end": 416.08
+      },
+      {
+       "name": "s6c",
+       "start": 416.08,
+       "end": 430.625
+      }
+     ],
+     "marks": {
+      "android": 3.14,
+      "c76": 10.2,
+      "limits": 27.58
+     },
+     "qa_times": [
+      396.93,
+      403.99,
+      421.37
+     ]
+    },
+    {
+     "id": "ai",
+     "section": "ai",
+     "kind": "ai",
+     "start": 430.625,
+     "end": 474.66,
+     "title": "Programming languages in the AI era",
+     "screen": "Python ecosystem · Mojo · natural language",
+     "objective": "說出 AI 領域目前的語言分工、Mojo 的定位，以及自然語言成為程式介面的趨勢。",
+     "narration": "What about languages for the AI era? Python is still the main language of AI, but the heavy computation usually runs in C++ and GPU code underneath. Mojo aims to combine the two. Announced by Modular in 2023, it looks like Python but compiles directly for CPUs and GPUs. Its first stable release, version 1.0, arrived in August 2026. Another shift: natural language itself is becoming an interface for programming. Developers describe what they want in words, and AI assistants generate the code.",
+     "phases": [
+      {
+       "name": "s7a",
+       "start": 430.625,
+       "end": 444.405
+      },
+      {
+       "name": "s7b",
+       "start": 444.405,
+       "end": 461.275
+      },
+      {
+       "name": "s7c",
+       "start": 461.275,
+       "end": 474.66
+      }
+     ],
+     "marks": {
+      "python": 4.0,
+      "gpu": 7.82,
+      "y2023": 18.31,
+      "cpu": 22.81,
+      "y2026": 28.43,
+      "describe": 36.8
+     },
+     "qa_times": [
+      434.625,
+      438.445,
+      448.935,
+      453.435,
+      459.055,
+      467.425
+     ]
+    },
+    {
+     "id": "outlook",
+     "section": "outlook",
+     "kind": "outlook",
+     "start": 474.66,
+     "end": 502.145,
+     "title": "Outlook: what comes next?",
+     "screen": "As of 2026-10-07 | announced · research · inference",
+     "objective": "區分已公佈、研究中與推測的發展，並指出尚未解決的問題。",
+     "narration": "Looking ahead, Modular has announced it will open-source the Mojo compiler in 2026, and researchers are exploring programming languages designed for large language models. Our inference: engineers will spend more time specifying requirements and verifying results. Whether AI-generated code is correct and secure remains an open problem.",
+     "phases": [
+      {
+       "name": "s8a",
+       "start": 474.66,
+       "end": 487.6
+      },
+      {
+       "name": "s8b",
+       "start": 487.6,
+       "end": 502.145
+      }
+     ],
+     "marks": {
+      "research": 7.32,
+      "open": 20.51
+     },
+     "qa_times": [
+      481.98,
+      495.17
+     ]
+    },
+    {
+     "id": "recap",
+     "section": "recap",
+     "kind": "recap",
+     "start": 502.145,
+     "end": 521.0,
+     "title": "Recap",
+     "screen": "Each step makes it easier to hand ideas to a computer",
+     "objective": "回收全片：語言演進的方向，以及選語言前先問要解決的問題。",
+     "narration": "From ones and zeros, to assembly, to high-level languages, and now AI, each step makes it easier to hand our ideas to a computer. When choosing a language, start by asking: what problem are you solving?",
+     "phases": [
+      {
+       "name": "s9a",
+       "start": 502.145,
+       "end": 521.0
+      }
+     ],
+     "marks": {
+      "n2": 2.98,
+      "n3": 4.04,
+      "n4": 5.7,
+      "ask": 11.66
+     },
+     "qa_times": [
+      505.125,
+      506.185,
+      507.845,
+      513.805
+     ]
+    },
+    {
+     "id": "credit",
+     "section": "credit",
+     "kind": "credit",
+     "start": 521.0,
+     "end": 524.0,
+     "title": "",
+     "screen": "李振偉老師",
+     "narration": "",
+     "phases": [
+      {
+       "name": "署名",
+       "start": 521.0,
+       "end": 524.0
+      }
+     ],
+     "qa_times": []
+    }
+   ],
+   "subtitles": {
+    "reviewed": true,
+    "timing_source": "Gemini audio: faster-whisper word timestamps mapped to approved script chunks, edges snapped to the narration energy envelope; spot-checked against screenshots",
+    "cues": [
+     {
+      "start": 0.86,
+      "end": 4.54,
+      "text": [
+       "電腦其實只看得懂 0 和 1。",
+       "A computer only understands ones and zeros."
+      ]
+     },
+     {
+      "start": 4.54,
+      "end": 8.32,
+      "text": [
+       "那為什麼世界上會有上千種程式語言？",
+       "So why are there thousands of programming languages?"
+      ]
+     },
+     {
+      "start": 8.32,
+      "end": 10.67,
+      "text": [
+       "因為每一種語言，都是人類為了解決某個問題，",
+       "Because every language is a kind of translation,"
+      ]
+     },
+     {
+      "start": 10.67,
+      "end": 13.63,
+      "text": [
+       "而發明的翻譯方式。",
+       "invented to solve a particular problem."
+      ]
+     },
+     {
+      "start": 13.63,
+      "end": 17.93,
+      "text": [
+       "今天，我們走一趟七十年的旅程。",
+       "Today, let's take a seventy-year journey."
+      ]
+     },
+     {
+      "start": 20.64,
+      "end": 22.965,
+      "text": [
+       "最早的程式設計師，直接用機器碼寫程式：",
+       "The first programmers wrote raw machine code:"
+      ]
+     },
+     {
+      "start": 22.965,
+      "end": 29.65,
+      "text": [
+       "一長串的 0 與 1，寫錯一位，整個程式就出錯。",
+       "long strings of ones and zeros, where a single wrong bit could break everything."
+      ]
+     },
+     {
+      "start": 30.5,
+      "end": 32.66,
+      "text": [
+       "接著出現組合語言，",
+       "Then came assembly language,"
+      ]
+     },
+     {
+      "start": 32.66,
+      "end": 38.32,
+      "text": [
+       "用 ADD、MOV 這樣的簡短代號，取代難記的數字。",
+       "which replaced numbers with short codes like ADD and MOV."
+      ]
+     },
+     {
+      "start": 38.32,
+      "end": 41.17,
+      "text": [
+       "但它仍然綁死在特定的機器上。",
+       "But it was still tied to one specific machine."
+      ]
+     },
+     {
+      "start": 42.1,
+      "end": 45.82,
+      "text": [
+       "真正的轉捩點在 1957 年。",
+       "The real turning point came in 1957."
+      ]
+     },
+     {
+      "start": 45.82,
+      "end": 49.94,
+      "text": [
+       "IBM 的約翰．巴克斯團隊推出 FORTRAN，",
+       "John Backus's team at IBM released FORTRAN."
+      ]
+     },
+     {
+      "start": 49.94,
+      "end": 54.385,
+      "text": [
+       "工程師第一次能用接近數學式的寫法，",
+       "For the first time, engineers could write formulas almost like math,"
+      ]
+     },
+     {
+      "start": 54.385,
+      "end": 59.11,
+      "text": [
+       "再由編譯器自動翻譯成機器碼。",
+       "and a compiler translated them into machine code automatically."
+      ]
+     },
+     {
+      "start": 60.02,
+      "end": 63.36,
+      "text": [
+       "這就是高階程式語言的起點：",
+       "This was the beginning of high-level languages:"
+      ]
+     },
+     {
+      "start": 63.36,
+      "end": 67.41,
+      "text": [
+       "讓人用人的方式思考，把翻譯工作交給電腦。",
+       "people think in human terms, and the computer handles the translation."
+      ]
+     },
+     {
+      "start": 69.88,
+      "end": 75.2,
+      "text": [
+       "高階語言是怎麼變成電腦能執行的指令？",
+       "So how does a high-level language become instructions a computer can run?"
+      ]
+     },
+     {
+      "start": 75.2,
+      "end": 77.91,
+      "text": [
+       "我們拿一行程式來拆解。",
+       "Let's take apart a single line of code."
+      ]
+     },
+     {
+      "start": 78.84,
+      "end": 81.32,
+      "text": [
+       "第一種方式是編譯。",
+       "The first approach is compiling."
+      ]
+     },
+     {
+      "start": 81.32,
+      "end": 85.18,
+      "text": [
+       "像 C 與 Rust，會在執行前",
+       "Languages like C and Rust translate the whole program"
+      ]
+     },
+     {
+      "start": 85.18,
+      "end": 87.78,
+      "text": [
+       "把整份程式，一次翻譯成機器碼。",
+       "into machine code before it runs."
+      ]
+     },
+     {
+      "start": 87.78,
+      "end": 91.87,
+      "text": [
+       "執行很快，但每次修改都要重新編譯。",
+       "The result is fast, but every change means compiling again."
+      ]
+     },
+     {
+      "start": 92.84,
+      "end": 95.32,
+      "text": [
+       "第二種方式是直譯。",
+       "The second approach is interpreting."
+      ]
+     },
+     {
+      "start": 95.32,
+      "end": 100.08,
+      "text": [
+       "像 Python，由直譯器一邊讀、一邊執行，",
+       "In Python, an interpreter reads and runs the code as it goes."
+      ]
+     },
+     {
+      "start": 100.08,
+      "end": 103.23,
+      "text": [
+       "修改後馬上能看到結果，代價是通常比較慢。",
+       "You see results right away, but it is usually slower."
+      ]
+     },
+     {
+      "start": 104.2,
+      "end": 106.44,
+      "text": [
+       "Java 和 C# 走中間路線：",
+       "Java and C# take a middle path."
+      ]
+     },
+     {
+      "start": 106.44,
+      "end": 111.7,
+      "text": [
+       "先編譯成中間碼，再交給虛擬機器，",
+       "They compile to an intermediate bytecode, then a virtual machine runs it,"
+      ]
+     },
+     {
+      "start": 111.7,
+      "end": 116.87,
+      "text": [
+       "執行時把常用的部分即時編譯，兼顧可攜性與速度。",
+       "compiling hot spots on the fly. That balances portability and speed."
+      ]
+     },
+     {
+      "start": 117.82,
+      "end": 119.32,
+      "text": [
+       "記住這個取捨：",
+       "Remember the trade-off:"
+      ]
+     },
+     {
+      "start": 119.32,
+      "end": 123.44,
+      "text": [
+       "抽象層級越高，越好寫、越安全；",
+       "the higher the abstraction, the easier and safer the code."
+      ]
+     },
+     {
+      "start": 123.44,
+      "end": 126.81,
+      "text": [
+       "越接近硬體，越能掌控效能，",
+       "The closer to the hardware, the more control over performance,"
+      ]
+     },
+     {
+      "start": 126.81,
+      "end": 129.17,
+      "text": [
+       "但責任也越大。",
+       "and the more responsibility."
+      ]
+     },
+     {
+      "start": 132.08,
+      "end": 135.18,
+      "text": [
+       "把七十年攤開在時間軸上。",
+       "Let's lay seventy years out on a timeline."
+      ]
+     },
+     {
+      "start": 135.18,
+      "end": 139.52,
+      "text": [
+       "1950 年代，FORTRAN 負責科學計算，",
+       "In the 1950s, FORTRAN handled scientific computing,"
+      ]
+     },
+     {
+      "start": 139.52,
+      "end": 144.03,
+      "text": [
+       "LISP 開啟人工智慧研究，COBOL 處理商業資料。",
+       "LISP launched AI research, and COBOL processed business data."
+      ]
+     },
+     {
+      "start": 144.96,
+      "end": 149.92,
+      "text": [
+       "1972 年，貝爾實驗室的丹尼斯．里奇設計出 C 語言，",
+       "In 1972, Dennis Ritchie at Bell Labs created C"
+      ]
+     },
+     {
+      "start": 149.92,
+      "end": 152.46,
+      "text": [
+       "用來撰寫 Unix 作業系統。",
+       "to build the Unix operating system."
+      ]
+     },
+     {
+      "start": 152.46,
+      "end": 158.21,
+      "text": [
+       "兩年後，IBM 發表了查詢資料庫的 SQL 前身。",
+       "Two years later, IBM introduced the forerunner of SQL for querying databases."
+      ]
+     },
+     {
+      "start": 159.16,
+      "end": 162.64,
+      "text": [
+       "1980 年代，物件導向興起：",
+       "The 1980s brought object-oriented programming."
+      ]
+     },
+     {
+      "start": 162.64,
+      "end": 169.11,
+      "text": [
+       "C++ 在 C 的基礎上加入類別，讓大型軟體更容易組織。",
+       "C++ added classes on top of C, making large software easier to organize."
+      ]
+     },
+     {
+      "start": 170.0,
+      "end": 174.86,
+      "text": [
+       "1990 年代，個人電腦與網際網路爆發：",
+       "In the 1990s, personal computers and the internet exploded."
+      ]
+     },
+     {
+      "start": 174.86,
+      "end": 177.92,
+      "text": [
+       "Python、Visual Basic、R、",
+       "Python, Visual Basic, R,"
+      ]
+     },
+     {
+      "start": 177.92,
+      "end": 181.61,
+      "text": [
+       "Java 和 JavaScript 都在這十年誕生。",
+       "Java, and JavaScript were all born in that decade."
+      ]
+     },
+     {
+      "start": 182.52,
+      "end": 185.285,
+      "text": [
+       "進入新世紀，微軟推出 C#；",
+       "In the new century, Microsoft launched C#."
+      ]
+     },
+     {
+      "start": 185.285,
+      "end": 188.205,
+      "text": [
+       "2015 年，Rust 發布 1.0，",
+       "In 2015, Rust reached version 1.0,"
+      ]
+     },
+     {
+      "start": 188.205,
+      "end": 192.265,
+      "text": [
+       "主打不需要垃圾回收的記憶體安全。",
+       "promising memory safety without a garbage collector."
+      ]
+     },
+     {
+      "start": 192.265,
+      "end": 197.45,
+      "text": [
+       "到了 2020 年代，AI 成為新的推力。",
+       "And in the 2020s, AI became the new driving force."
+      ]
+     },
+     {
+      "start": 200.56,
+      "end": 203.28,
+      "text": [
+       "這麼多語言，哪些最多人用？",
+       "With so many languages, which are the most popular?"
+      ]
+     },
+     {
+      "start": 203.28,
+      "end": 206.82,
+      "text": [
+       "TIOBE 指數每個月統計一次，",
+       "The TIOBE Index updates every month,"
+      ]
+     },
+     {
+      "start": 206.82,
+      "end": 211.72,
+      "text": [
+       "計算各語言在 Google、Bing、維基百科",
+       "counting results for each language across more than twenty sources,"
+      ]
+     },
+     {
+      "start": 211.72,
+      "end": 214.69,
+      "text": [
+       "等二十多個搜尋來源的相關結果。",
+       "including Google, Bing, and Wikipedia."
+      ]
+     },
+     {
+      "start": 215.52,
+      "end": 219.58,
+      "text": [
+       "要注意，它反映的是熱門程度與學習資源，",
+       "Keep in mind that it reflects popularity and available resources,"
+      ]
+     },
+     {
+      "start": 219.58,
+      "end": 222.94,
+      "text": [
+       "不是語言的好壞，也不是程式碼的數量。",
+       "not quality, and not the amount of code written."
+      ]
+     },
+     {
+      "start": 222.94,
+      "end": 225.83,
+      "text": [
+       "以下採用 2026 年 9 月的榜單。",
+       "We'll use the September 2026 rankings."
+      ]
+     },
+     {
+      "start": 228.36,
+      "end": 232.405,
+      "text": [
+       "把前十名放回它們誕生的年代，會發現一件事：",
+       "Place today's top ten back on the timeline, and something stands out:"
+      ]
+     },
+     {
+      "start": 232.405,
+      "end": 237.98,
+      "text": [
+       "1972 年的 C 依然排第二，",
+       "C, born in 1972, is still number two,"
+      ]
+     },
+     {
+      "start": 237.98,
+      "end": 241.77,
+      "text": [
+       "而最年輕的 Rust，已經擠進第十名。",
+       "while Rust, the youngest, has climbed into tenth place."
+      ]
+     },
+     {
+      "start": 244.88,
+      "end": 249.62,
+      "text": [
+       "第一名 Python，市占約 17.8%。",
+       "Number one is Python, with about 17.8 percent."
+      ]
+     },
+     {
+      "start": 249.62,
+      "end": 253.5,
+      "text": [
+       "語法簡潔，加上豐富的套件，",
+       "Its clean syntax and huge library ecosystem"
+      ]
+     },
+     {
+      "start": 253.5,
+      "end": 256.85,
+      "text": [
+       "是資料科學與 AI 的共同語言。",
+       "make it the shared language of data science and AI."
+      ]
+     },
+     {
+      "start": 258.1,
+      "end": 262.32,
+      "text": [
+       "第二名 C，約 10.3%。",
+       "Number two is C, at about 10.3 percent."
+      ]
+     },
+     {
+      "start": 262.32,
+      "end": 267.27,
+      "text": [
+       "作業系統、嵌入式裝置與驅動程式，至今仍大量依賴它。",
+       "Operating systems, embedded devices, and drivers still rely on it heavily."
+      ]
+     },
+     {
+      "start": 268.66,
+      "end": 273.22,
+      "text": [
+       "第三名 C++，約 8.7%。",
+       "Number three is C++, at about 8.7 percent."
+      ]
+     },
+     {
+      "start": 273.22,
+      "end": 277.26,
+      "text": [
+       "遊戲引擎、瀏覽器與高頻交易系統，",
+       "Game engines, web browsers, and high-frequency trading systems"
+      ]
+     },
+     {
+      "start": 277.26,
+      "end": 279.49,
+      "text": [
+       "需要它的速度與控制力。",
+       "depend on its speed and control."
+      ]
+     },
+     {
+      "start": 280.88,
+      "end": 284.7,
+      "text": [
+       "第四名 Java，約 7.5%。",
+       "Number four is Java, at about 7.5 percent."
+      ]
+     },
+     {
+      "start": 284.7,
+      "end": 287.48,
+      "text": [
+       "一次編寫、到處執行，",
+       "Write once, run anywhere:"
+      ]
+     },
+     {
+      "start": 287.48,
+      "end": 291.33,
+      "text": [
+       "撐起大量企業後端與 Android 應用。",
+       "it powers countless enterprise back ends and Android apps."
+      ]
+     },
+     {
+      "start": 292.74,
+      "end": 297.36,
+      "text": [
+       "第五名 C#，約 4.2%。",
+       "Number five is C sharp, at about 4.2 percent."
+      ]
+     },
+     {
+      "start": 297.36,
+      "end": 299.54,
+      "text": [
+       "微軟的主力語言，",
+       "Microsoft's flagship language,"
+      ]
+     },
+     {
+      "start": 299.54,
+      "end": 303.91,
+      "text": [
+       "常見於 Windows 應用、雲端服務與 Unity 遊戲開發。",
+       "common in Windows apps, cloud services, and Unity game development."
+      ]
+     },
+     {
+      "start": 305.16,
+      "end": 309.78,
+      "text": [
+       "第六名 JavaScript，約 2.8%。",
+       "Number six is JavaScript, at about 2.8 percent."
+      ]
+     },
+     {
+      "start": 309.78,
+      "end": 312.22,
+      "text": [
+       "它是瀏覽器內建的語言，",
+       "It is built into every web browser,"
+      ]
+     },
+     {
+      "start": 312.22,
+      "end": 315.85,
+      "text": [
+       "幾乎每個網頁的互動都靠它。",
+       "and drives the interactivity of almost every web page."
+      ]
+     },
+     {
+      "start": 317.1,
+      "end": 321.98,
+      "text": [
+       "第七名 Visual Basic，約 2.6%。",
+       "Number seven is Visual Basic, at about 2.6 percent."
+      ]
+     },
+     {
+      "start": 321.98,
+      "end": 326.39,
+      "text": [
+       "在 Office 自動化與企業舊系統中，依然常見。",
+       "It remains common in Office automation and older business systems."
+      ]
+     },
+     {
+      "start": 327.64,
+      "end": 332.28,
+      "text": [
+       "第八名 SQL，約 2.2%。",
+       "Number eight is SQL, at about 2.2 percent."
+      ]
+     },
+     {
+      "start": 332.28,
+      "end": 337.55,
+      "text": [
+       "它不寫應用程式，而是專門向資料庫查詢與管理資料。",
+       "It isn't used to build apps; it is used to query and manage data in databases."
+      ]
+     },
+     {
+      "start": 338.74,
+      "end": 342.92,
+      "text": [
+       "第九名 R，約 1.7%。",
+       "Number nine is R, at about 1.7 percent."
+      ]
+     },
+     {
+      "start": 342.92,
+      "end": 344.66,
+      "text": [
+       "由統計學家設計，",
+       "Designed by statisticians,"
+      ]
+     },
+     {
+      "start": 344.66,
+      "end": 348.71,
+      "text": [
+       "擅長統計分析與資料視覺化。",
+       "it excels at statistical analysis and data visualization."
+      ]
+     },
+     {
+      "start": 349.9,
+      "end": 354.2,
+      "text": [
+       "第十名 Rust，約 1.3%。",
+       "Number ten is Rust, at about 1.3 percent."
+      ]
+     },
+     {
+      "start": 354.2,
+      "end": 357.2,
+      "text": [
+       "在編譯時就檢查記憶體錯誤，",
+       "It catches memory errors at compile time,"
+      ]
+     },
+     {
+      "start": 357.2,
+      "end": 361.25,
+      "text": [
+       "正逐步進入作業系統與基礎設施。",
+       "and is steadily moving into operating systems and infrastructure."
+      ]
+     },
+     {
+      "start": 363.74,
+      "end": 366.56,
+      "text": [
+       "把十種語言放在同一張表比較：",
+       "Compare all ten on the same table:"
+      ]
+     },
+     {
+      "start": 366.56,
+      "end": 371.22,
+      "text": [
+       "執行方式、記憶體管理、型別檢查，",
+       "how they run, how they manage memory, and how they check types."
+      ]
+     },
+     {
+      "start": 371.22,
+      "end": 374.07,
+      "text": [
+       "決定了它們各自擅長的戰場。",
+       "Those choices shape where each one shines."
+      ]
+     },
+     {
+      "start": 375.0,
+      "end": 380.82,
+      "text": [
+       "C 與 C++ 手動管理記憶體，速度快但容易出錯；",
+       "C and C++ manage memory by hand: fast, but error-prone."
+      ]
+     },
+     {
+      "start": 380.82,
+      "end": 387.48,
+      "text": [
+       "Java、C#、Python 用垃圾回收，安全但多一點負擔；",
+       "Java, C sharp, and Python use garbage collection: safer, with some overhead."
+      ]
+     },
+     {
+      "start": 387.48,
+      "end": 391.53,
+      "text": [
+       "Rust 用所有權規則，在編譯時就把關。",
+       "Rust uses ownership rules, enforced at compile time."
+      ]
+     },
+     {
+      "start": 394.7,
+      "end": 395.41,
+      "text": [
+       "來看一個真實案例。",
+       "Here's a real case."
+      ]
+     },
+     {
+      "start": 395.41,
+      "end": 399.42,
+      "text": [
+       "Android 的大量系統程式碼用 C 與 C++ 撰寫，",
+       "Much of Android's system code is written in C and C++."
+      ]
+     },
+     {
+      "start": 399.42,
+      "end": 406.75,
+      "text": [
+       "2019 年，記憶體安全漏洞占所有漏洞的 76%。",
+       "In 2019, memory safety bugs made up 76 percent of its vulnerabilities."
+      ]
+     },
+     {
+      "start": 407.6,
+      "end": 410.74,
+      "text": [
+       "Google 的做法不是全部重寫，",
+       "Google's approach was not to rewrite everything,"
+      ]
+     },
+     {
+      "start": 410.74,
+      "end": 411.92,
+      "text": [
+       "而是讓新程式碼優先使用",
+       "but to write new code"
+      ]
+     },
+     {
+      "start": 411.92,
+      "end": 415.47,
+      "text": [
+       "Rust、Kotlin 這類記憶體安全的語言。",
+       "in memory-safe languages such as Rust and Kotlin."
+      ]
+     },
+     {
+      "start": 416.56,
+      "end": 421.2,
+      "text": [
+       "到了 2024 年，這個比例降到 24%。",
+       "By 2024, that share had fallen to 24 percent."
+      ]
+     },
+     {
+      "start": 421.2,
+      "end": 425.78,
+      "text": [
+       "限制是：舊的 C 與 C++ 程式碼仍然存在，",
+       "The limits: older C and C++ code still exists,"
+      ]
+     },
+     {
+      "start": 425.78,
+      "end": 428.61,
+      "text": [
+       "不同語言之間的銜接，也需要額外成本。",
+       "and connecting different languages adds extra cost."
+      ]
+     },
+     {
+      "start": 431.54,
+      "end": 434.7,
+      "text": [
+       "那 AI 時代的語言呢？",
+       "What about languages for the AI era?"
+      ]
+     },
+     {
+      "start": 434.7,
+      "end": 437.64,
+      "text": [
+       "目前 AI 的主力仍是 Python，",
+       "Python is still the main language of AI,"
+      ]
+     },
+     {
+      "start": 437.64,
+      "end": 443.67,
+      "text": [
+       "但真正的大量運算，多半交給底層的 C++ 與 GPU 程式。",
+       "but the heavy computation usually runs in C++ and GPU code underneath."
+      ]
+     },
+     {
+      "start": 444.8,
+      "end": 447.4,
+      "text": [
+       "Mojo 想把兩者合而為一。",
+       "Mojo aims to combine the two."
+      ]
+     },
+     {
+      "start": 447.4,
+      "end": 450.38,
+      "text": [
+       "它在 2023 年由 Modular 公司發表，",
+       "Announced by Modular in 2023,"
+      ]
+     },
+     {
+      "start": 450.38,
+      "end": 455.78,
+      "text": [
+       "語法接近 Python，卻能直接為 CPU 與 GPU 編譯；",
+       "it looks like Python but compiles directly for CPUs and GPUs."
+      ]
+     },
+     {
+      "start": 455.78,
+      "end": 460.71,
+      "text": [
+       "2026 年 8 月推出第一個穩定版 1.0。",
+       "Its first stable release, version 1.0, arrived in August 2026."
+      ]
+     },
+     {
+      "start": 461.6,
+      "end": 467.5,
+      "text": [
+       "另一個變化是：自然語言本身，正在成為寫程式的介面。",
+       "Another shift: natural language itself is becoming an interface for programming."
+      ]
+     },
+     {
+      "start": 467.5,
+      "end": 472.83,
+      "text": [
+       "開發者用文字描述需求，再由 AI 助手產生程式碼。",
+       "Developers describe what they want in words, and AI assistants generate the code."
+      ]
+     },
+     {
+      "start": 475.56,
+      "end": 477.86,
+      "text": [
+       "展望未來，Modular 已宣布",
+       "Looking ahead, Modular has announced"
+      ]
+     },
+     {
+      "start": 477.86,
+      "end": 481.82,
+      "text": [
+       "將在 2026 年開放 Mojo 編譯器原始碼；",
+       "it will open-source the Mojo compiler in 2026,"
+      ]
+     },
+     {
+      "start": 481.82,
+      "end": 484.68,
+      "text": [
+       "學界也正研究",
+       "and researchers are exploring programming languages"
+      ]
+     },
+     {
+      "start": 484.68,
+      "end": 486.99,
+      "text": [
+       "專為大型語言模型設計的程式語言。",
+       "designed for large language models."
+      ]
+     },
+     {
+      "start": 488.0,
+      "end": 491.31,
+      "text": [
+       "我們推測，",
+       "Our inference: engineers will spend more time"
+      ]
+     },
+     {
+      "start": 491.31,
+      "end": 495.04,
+      "text": [
+       "工程師會花更多時間描述需求與驗證結果；",
+       "specifying requirements and verifying results."
+      ]
+     },
+     {
+      "start": 495.04,
+      "end": 500.11,
+      "text": [
+       "而 AI 產生的程式碼是否正確、安全，仍是尚未解決的問題。",
+       "Whether AI-generated code is correct and secure remains an open problem."
+      ]
+     },
+     {
+      "start": 503.08,
+      "end": 509.24,
+      "text": [
+       "從 0 與 1，到組合語言、高階語言，再到 AI。",
+       "From ones and zeros, to assembly, to high-level languages, and now AI,"
+      ]
+     },
+     {
+      "start": 509.24,
+      "end": 513.78,
+      "text": [
+       "每一步，都是讓人更容易把想法交給電腦。",
+       "each step makes it easier to hand our ideas to a computer."
+      ]
+     },
+     {
+      "start": 513.78,
+      "end": 518.45,
+      "text": [
+       "選擇語言時，先問：你要解決什麼問題？",
+       "When choosing a language, start by asking: what problem are you solving?"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "font_assets": [
+  {
+   "family": "Noto Sans",
+   "url": "fonts/NotoSans-Regular.ttf",
+   "weight": "400"
+  },
+  {
+   "family": "Noto Sans",
+   "url": "fonts/NotoSans-Bold.ttf",
+   "weight": "700 900"
+  },
+  {
+   "family": "Noto Sans TC",
+   "url": "fonts/NotoSansTC-VF.ttf",
+   "weight": "100 900"
+  }
+ ],
+ "alt_subtitles": {
+  "vi-VN": {
+   "zh-TW": [
+    {
+     "start": 0.74,
+     "end": 4.12,
+     "text": [
+      "電腦其實只看得懂 0 和 1。",
+      "Máy tính thực ra chỉ hiểu được số 0 và số 1."
+     ]
+    },
+    {
+     "start": 4.12,
+     "end": 7.83,
+     "text": [
+      "那為什麼世界上會有上千種程式語言？",
+      "Vậy tại sao thế giới lại có hàng nghìn ngôn ngữ lập trình?"
+     ]
+    },
+    {
+     "start": 8.72,
+     "end": 12.75,
+     "text": [
+      "因為每一種語言，都是人類為了解決某個問題，",
+      "Bởi vì mỗi ngôn ngữ là một cách phiên dịch"
+     ]
+    },
+    {
+     "start": 12.75,
+     "end": 15.64,
+     "text": [
+      "而發明的翻譯方式。",
+      "mà con người tạo ra để giải quyết một vấn đề nào đó."
+     ]
+    },
+    {
+     "start": 15.64,
+     "end": 18.85,
+     "text": [
+      "今天，我們走一趟七十年的旅程。",
+      "Hôm nay, chúng ta cùng đi một hành trình bảy mươi năm."
+     ]
+    },
+    {
+     "start": 23.86,
+     "end": 28.12,
+     "text": [
+      "最早的程式設計師，直接用機器碼寫程式：",
+      "Những lập trình viên đầu tiên viết thẳng bằng mã máy:"
+     ]
+    },
+    {
+     "start": 28.12,
+     "end": 33.9,
+     "text": [
+      "一長串的 0 與 1，寫錯一位，整個程式就出錯。",
+      "những chuỗi 0 và 1 dài, sai một bit là cả chương trình hỏng."
+     ]
+    },
+    {
+     "start": 33.9,
+     "end": 36.12,
+     "text": [
+      "接著出現組合語言，",
+      "Tiếp theo là hợp ngữ (assembly),"
+     ]
+    },
+    {
+     "start": 36.12,
+     "end": 41.62,
+     "text": [
+      "用 ADD、MOV 這樣的簡短代號，取代難記的數字。",
+      "dùng các mã ngắn như ADD, MOV thay cho những con số khó nhớ."
+     ]
+    },
+    {
+     "start": 41.62,
+     "end": 45.06,
+     "text": [
+      "但它仍然綁死在特定的機器上。",
+      "Nhưng nó vẫn bị gắn chặt với một loại máy cụ thể."
+     ]
+    },
+    {
+     "start": 45.06,
+     "end": 47.262,
+     "text": [
+      "真正的轉捩點在 1957 年。",
+      "Bước ngoặt thật sự đến vào năm 1957."
+     ]
+    },
+    {
+     "start": 47.262,
+     "end": 52.04,
+     "text": [
+      "IBM 的約翰．巴克斯團隊推出 FORTRAN，",
+      "Nhóm của John Backus tại IBM ra mắt FORTRAN."
+     ]
+    },
+    {
+     "start": 52.04,
+     "end": 55.98,
+     "text": [
+      "工程師第一次能用接近數學式的寫法，",
+      "Lần đầu tiên, kỹ sư có thể viết gần giống công thức toán học,"
+     ]
+    },
+    {
+     "start": 55.98,
+     "end": 59.72,
+     "text": [
+      "再由編譯器自動翻譯成機器碼。",
+      "rồi trình biên dịch tự động dịch sang mã máy."
+     ]
+    },
+    {
+     "start": 59.72,
+     "end": 62.94,
+     "text": [
+      "這就是高階程式語言的起點：",
+      "Đó là khởi đầu của ngôn ngữ lập trình bậc cao:"
+     ]
+    },
+    {
+     "start": 62.94,
+     "end": 67.59,
+     "text": [
+      "讓人用人的方式思考，把翻譯工作交給電腦。",
+      "con người suy nghĩ theo cách của con người, còn máy tính lo việc phiên dịch."
+     ]
+    },
+    {
+     "start": 72.46,
+     "end": 76.52,
+     "text": [
+      "高階語言是怎麼變成電腦能執行的指令？",
+      "Ngôn ngữ bậc cao trở thành lệnh máy tính chạy được bằng cách nào?"
+     ]
+    },
+    {
+     "start": 76.52,
+     "end": 78.37,
+     "text": [
+      "我們拿一行程式來拆解。",
+      "Hãy cùng mổ xẻ một dòng mã."
+     ]
+    },
+    {
+     "start": 79.34,
+     "end": 81.44,
+     "text": [
+      "第一種方式是編譯。",
+      "Cách thứ nhất là biên dịch."
+     ]
+    },
+    {
+     "start": 81.44,
+     "end": 84.053,
+     "text": [
+      "像 C 與 Rust，會在執行前",
+      "Như C và Rust: trước khi chạy,"
+     ]
+    },
+    {
+     "start": 84.053,
+     "end": 87.78,
+     "text": [
+      "把整份程式，一次翻譯成機器碼。",
+      "dịch toàn bộ chương trình sang mã máy một lần."
+     ]
+    },
+    {
+     "start": 87.78,
+     "end": 91.47,
+     "text": [
+      "執行很快，但每次修改都要重新編譯。",
+      "Chạy rất nhanh, nhưng mỗi lần sửa đều phải biên dịch lại."
+     ]
+    },
+    {
+     "start": 92.38,
+     "end": 94.58,
+     "text": [
+      "第二種方式是直譯。",
+      "Cách thứ hai là thông dịch."
+     ]
+    },
+    {
+     "start": 94.58,
+     "end": 98.64,
+     "text": [
+      "像 Python，由直譯器一邊讀、一邊執行，",
+      "Như Python: trình thông dịch vừa đọc vừa chạy."
+     ]
+    },
+    {
+     "start": 98.64,
+     "end": 102.87,
+     "text": [
+      "修改後馬上能看到結果，代價是通常比較慢。",
+      "Sửa xong thấy kết quả ngay, đổi lại thường chạy chậm hơn."
+     ]
+    },
+    {
+     "start": 103.84,
+     "end": 105.44,
+     "text": [
+      "Java 和 C# 走中間路線：",
+      "Java và C# đi con đường ở giữa:"
+     ]
+    },
+    {
+     "start": 105.44,
+     "end": 109.693,
+     "text": [
+      "先編譯成中間碼，再交給虛擬機器，",
+      "biên dịch sang mã trung gian, rồi giao cho máy ảo,"
+     ]
+    },
+    {
+     "start": 109.693,
+     "end": 116.23,
+     "text": [
+      "執行時把常用的部分即時編譯，兼顧可攜性與速度。",
+      "khi chạy thì biên dịch tức thời phần dùng nhiều, cân bằng tính di động và tốc độ."
+     ]
+    },
+    {
+     "start": 117.18,
+     "end": 118.84,
+     "text": [
+      "記住這個取捨：",
+      "Hãy nhớ sự đánh đổi này:"
+     ]
+    },
+    {
+     "start": 118.84,
+     "end": 122.62,
+     "text": [
+      "抽象層級越高，越好寫、越安全；",
+      "mức trừu tượng càng cao thì càng dễ viết, càng an toàn;"
+     ]
+    },
+    {
+     "start": 122.62,
+     "end": 125.66,
+     "text": [
+      "越接近硬體，越能掌控效能，",
+      "Càng gần phần cứng thì càng kiểm soát được hiệu năng,"
+     ]
+    },
+    {
+     "start": 125.66,
+     "end": 127.25,
+     "text": [
+      "但責任也越大。",
+      "nhưng trách nhiệm cũng càng lớn."
+     ]
+    },
+    {
+     "start": 132.42,
+     "end": 135.32,
+     "text": [
+      "把七十年攤開在時間軸上。",
+      "Hãy trải bảy mươi năm lên một dòng thời gian."
+     ]
+    },
+    {
+     "start": 135.32,
+     "end": 138.055,
+     "text": [
+      "1950 年代，FORTRAN 負責科學計算，",
+      "Thập niên 1950, FORTRAN lo tính toán khoa học,"
+     ]
+    },
+    {
+     "start": 138.055,
+     "end": 143.17,
+     "text": [
+      "LISP 開啟人工智慧研究，COBOL 處理商業資料。",
+      "LISP mở đầu nghiên cứu trí tuệ nhân tạo, COBOL xử lý dữ liệu kinh doanh."
+     ]
+    },
+    {
+     "start": 144.18,
+     "end": 149.58,
+     "text": [
+      "1972 年，貝爾實驗室的丹尼斯．里奇設計出 C 語言，",
+      "Năm 1972, Dennis Ritchie ở Bell Labs tạo ra ngôn ngữ C"
+     ]
+    },
+    {
+     "start": 149.58,
+     "end": 152.3,
+     "text": [
+      "用來撰寫 Unix 作業系統。",
+      "để viết hệ điều hành Unix."
+     ]
+    },
+    {
+     "start": 152.3,
+     "end": 157.54,
+     "text": [
+      "兩年後，IBM 發表了查詢資料庫的 SQL 前身。",
+      "Hai năm sau, IBM công bố tiền thân của SQL để truy vấn cơ sở dữ liệu."
+     ]
+    },
+    {
+     "start": 157.54,
+     "end": 160.5,
+     "text": [
+      "1980 年代，物件導向興起：",
+      "Thập niên 1980, lập trình hướng đối tượng trỗi dậy:"
+     ]
+    },
+    {
+     "start": 160.5,
+     "end": 165.97,
+     "text": [
+      "C++ 在 C 的基礎上加入類別，讓大型軟體更容易組織。",
+      "C++ thêm lớp (class) vào C, giúp phần mềm lớn dễ tổ chức hơn."
+     ]
+    },
+    {
+     "start": 166.84,
+     "end": 171.22,
+     "text": [
+      "1990 年代，個人電腦與網際網路爆發：",
+      "Thập niên 1990, máy tính cá nhân và Internet bùng nổ:"
+     ]
+    },
+    {
+     "start": 171.22,
+     "end": 174.08,
+     "text": [
+      "Python、Visual Basic、R、",
+      "Python, Visual Basic, R,"
+     ]
+    },
+    {
+     "start": 174.08,
+     "end": 177.83,
+     "text": [
+      "Java 和 JavaScript 都在這十年誕生。",
+      "Java và JavaScript đều ra đời trong thập niên này."
+     ]
+    },
+    {
+     "start": 178.74,
+     "end": 181.415,
+     "text": [
+      "進入新世紀，微軟推出 C#；",
+      "Sang thế kỷ mới, Microsoft ra mắt C#;"
+     ]
+    },
+    {
+     "start": 181.415,
+     "end": 184.06,
+     "text": [
+      "2015 年，Rust 發布 1.0，",
+      "Năm 2015, Rust phát hành bản 1.0,"
+     ]
+    },
+    {
+     "start": 184.06,
+     "end": 187.775,
+     "text": [
+      "主打不需要垃圾回收的記憶體安全。",
+      "nhấn mạnh an toàn bộ nhớ mà không cần bộ thu gom rác."
+     ]
+    },
+    {
+     "start": 187.775,
+     "end": 192.43,
+     "text": [
+      "到了 2020 年代，AI 成為新的推力。",
+      "Đến thập niên 2020, AI trở thành động lực mới."
+     ]
+    },
+    {
+     "start": 197.96,
+     "end": 201.38,
+     "text": [
+      "這麼多語言，哪些最多人用？",
+      "Nhiều ngôn ngữ như vậy, ngôn ngữ nào được dùng nhiều nhất?"
+     ]
+    },
+    {
+     "start": 201.38,
+     "end": 204.52,
+     "text": [
+      "TIOBE 指數每個月統計一次，",
+      "Chỉ số TIOBE được cập nhật mỗi tháng,"
+     ]
+    },
+    {
+     "start": 204.52,
+     "end": 208.34,
+     "text": [
+      "計算各語言在 Google、Bing、維基百科",
+      "đếm kết quả của từng ngôn ngữ trên Google, Bing, Wikipedia"
+     ]
+    },
+    {
+     "start": 208.34,
+     "end": 211.29,
+     "text": [
+      "等二十多個搜尋來源的相關結果。",
+      "và hơn hai mươi nguồn tìm kiếm khác."
+     ]
+    },
+    {
+     "start": 212.1,
+     "end": 216.62,
+     "text": [
+      "要注意，它反映的是熱門程度與學習資源，",
+      "Lưu ý: chỉ số này phản ánh mức độ phổ biến và tài nguyên học tập,"
+     ]
+    },
+    {
+     "start": 216.62,
+     "end": 220.46,
+     "text": [
+      "不是語言的好壞，也不是程式碼的數量。",
+      "không phải ngôn ngữ tốt hay dở, cũng không phải lượng mã được viết."
+     ]
+    },
+    {
+     "start": 220.46,
+     "end": 223.83,
+     "text": [
+      "以下採用 2026 年 9 月的榜單。",
+      "Dưới đây dùng bảng xếp hạng tháng 9 năm 2026."
+     ]
+    },
+    {
+     "start": 228.56,
+     "end": 232.92,
+     "text": [
+      "把前十名放回它們誕生的年代，會發現一件事：",
+      "Đặt mười ngôn ngữ hàng đầu về đúng năm ra đời, một điều nổi bật:"
+     ]
+    },
+    {
+     "start": 232.92,
+     "end": 235.86,
+     "text": [
+      "1972 年的 C 依然排第二，",
+      "C, ra đời năm 1972, vẫn đứng thứ hai,"
+     ]
+    },
+    {
+     "start": 235.86,
+     "end": 239.15,
+     "text": [
+      "而最年輕的 Rust，已經擠進第十名。",
+      "còn Rust, ngôn ngữ trẻ nhất, đã lọt vào vị trí thứ mười."
+     ]
+    },
+    {
+     "start": 244.36,
+     "end": 248.6,
+     "text": [
+      "第一名 Python，市占約 17.8%。",
+      "Hạng nhất là Python, khoảng 17,8%."
+     ]
+    },
+    {
+     "start": 248.6,
+     "end": 251.42,
+     "text": [
+      "語法簡潔，加上豐富的套件，",
+      "Cú pháp gọn cùng kho thư viện phong phú"
+     ]
+    },
+    {
+     "start": 251.42,
+     "end": 254.41,
+     "text": [
+      "是資料科學與 AI 的共同語言。",
+      "khiến nó thành ngôn ngữ chung của khoa học dữ liệu và AI."
+     ]
+    },
+    {
+     "start": 255.64,
+     "end": 258.66,
+     "text": [
+      "第二名 C，約 10.3%。",
+      "Hạng hai là C, khoảng 10,3%."
+     ]
+    },
+    {
+     "start": 258.66,
+     "end": 265.03,
+     "text": [
+      "作業系統、嵌入式裝置與驅動程式，至今仍大量依賴它。",
+      "Hệ điều hành, thiết bị nhúng và trình điều khiển đến nay vẫn phụ thuộc nhiều vào nó."
+     ]
+    },
+    {
+     "start": 266.32,
+     "end": 270.48,
+     "text": [
+      "第三名 C++，約 8.7%。",
+      "Hạng ba là C++, khoảng 8,7%."
+     ]
+    },
+    {
+     "start": 270.48,
+     "end": 274.5,
+     "text": [
+      "遊戲引擎、瀏覽器與高頻交易系統，",
+      "Game engine, trình duyệt và hệ thống giao dịch tần suất cao"
+     ]
+    },
+    {
+     "start": 274.5,
+     "end": 276.73,
+     "text": [
+      "需要它的速度與控制力。",
+      "cần tốc độ và khả năng kiểm soát của nó."
+     ]
+    },
+    {
+     "start": 277.92,
+     "end": 281.38,
+     "text": [
+      "第四名 Java，約 7.5%。",
+      "Hạng tư là Java, khoảng 7,5%."
+     ]
+    },
+    {
+     "start": 281.38,
+     "end": 284.22,
+     "text": [
+      "一次編寫、到處執行，",
+      "Viết một lần, chạy mọi nơi:"
+     ]
+    },
+    {
+     "start": 284.22,
+     "end": 287.43,
+     "text": [
+      "撐起大量企業後端與 Android 應用。",
+      "nó vận hành vô số hệ thống doanh nghiệp và ứng dụng Android."
+     ]
+    },
+    {
+     "start": 288.62,
+     "end": 290.56,
+     "text": [
+      "第五名 C#，約 4.2%。",
+      "Hạng năm là C#, khoảng 4,2%."
+     ]
+    },
+    {
+     "start": 290.56,
+     "end": 293.22,
+     "text": [
+      "微軟的主力語言，",
+      "Ngôn ngữ chủ lực của Microsoft,"
+     ]
+    },
+    {
+     "start": 293.22,
+     "end": 298.75,
+     "text": [
+      "常見於 Windows 應用、雲端服務與 Unity 遊戲開發。",
+      "phổ biến trong ứng dụng Windows, dịch vụ đám mây và game Unity."
+     ]
+    },
+    {
+     "start": 300.0,
+     "end": 303.82,
+     "text": [
+      "第六名 JavaScript，約 2.8%。",
+      "Hạng sáu là JavaScript, khoảng 2,8%."
+     ]
+    },
+    {
+     "start": 303.82,
+     "end": 306.14,
+     "text": [
+      "它是瀏覽器內建的語言，",
+      "Nó được tích hợp sẵn trong mọi trình duyệt;"
+     ]
+    },
+    {
+     "start": 306.14,
+     "end": 308.69,
+     "text": [
+      "幾乎每個網頁的互動都靠它。",
+      "hầu như mọi tương tác trên web đều nhờ nó."
+     ]
+    },
+    {
+     "start": 309.92,
+     "end": 314.74,
+     "text": [
+      "第七名 Visual Basic，約 2.6%。",
+      "Hạng bảy là Visual Basic, khoảng 2,6%."
+     ]
+    },
+    {
+     "start": 314.74,
+     "end": 319.13,
+     "text": [
+      "在 Office 自動化與企業舊系統中，依然常見。",
+      "Vẫn thường gặp trong tự động hóa Office và các hệ thống doanh nghiệp cũ."
+     ]
+    },
+    {
+     "start": 320.3,
+     "end": 325.18,
+     "text": [
+      "第八名 SQL，約 2.2%。",
+      "Hạng tám là SQL, khoảng 2,2%."
+     ]
+    },
+    {
+     "start": 325.18,
+     "end": 330.27,
+     "text": [
+      "它不寫應用程式，而是專門向資料庫查詢與管理資料。",
+      "Nó không dùng để viết ứng dụng mà chuyên truy vấn và quản lý dữ liệu trong cơ sở dữ liệu."
+     ]
+    },
+    {
+     "start": 331.5,
+     "end": 334.76,
+     "text": [
+      "第九名 R，約 1.7%。",
+      "Hạng chín là R, khoảng 1,7%."
+     ]
+    },
+    {
+     "start": 334.76,
+     "end": 337.28,
+     "text": [
+      "由統計學家設計，",
+      "Do các nhà thống kê thiết kế,"
+     ]
+    },
+    {
+     "start": 337.28,
+     "end": 340.25,
+     "text": [
+      "擅長統計分析與資料視覺化。",
+      "mạnh về phân tích thống kê và trực quan hóa dữ liệu."
+     ]
+    },
+    {
+     "start": 341.58,
+     "end": 345.54,
+     "text": [
+      "第十名 Rust，約 1.3%。",
+      "Hạng mười là Rust, khoảng 1,3%."
+     ]
+    },
+    {
+     "start": 345.54,
+     "end": 348.58,
+     "text": [
+      "在編譯時就檢查記憶體錯誤，",
+      "Nó bắt lỗi bộ nhớ ngay khi biên dịch"
+     ]
+    },
+    {
+     "start": 348.58,
+     "end": 351.75,
+     "text": [
+      "正逐步進入作業系統與基礎設施。",
+      "và đang dần đi vào hệ điều hành và hạ tầng."
+     ]
+    },
+    {
+     "start": 356.56,
+     "end": 359.94,
+     "text": [
+      "把十種語言放在同一張表比較：",
+      "So sánh mười ngôn ngữ trên cùng một bảng:"
+     ]
+    },
+    {
+     "start": 359.94,
+     "end": 363.96,
+     "text": [
+      "執行方式、記憶體管理、型別檢查，",
+      "cách thực thi, cách quản lý bộ nhớ và cách kiểm tra kiểu,"
+     ]
+    },
+    {
+     "start": 363.96,
+     "end": 366.23,
+     "text": [
+      "決定了它們各自擅長的戰場。",
+      "quyết định thế mạnh riêng của từng ngôn ngữ."
+     ]
+    },
+    {
+     "start": 367.22,
+     "end": 373.14,
+     "text": [
+      "C 與 C++ 手動管理記憶體，速度快但容易出錯；",
+      "C và C++ quản lý bộ nhớ thủ công: nhanh nhưng dễ sai;"
+     ]
+    },
+    {
+     "start": 373.14,
+     "end": 378.512,
+     "text": [
+      "Java、C#、Python 用垃圾回收，安全但多一點負擔；",
+      "Java, C#, Python dùng thu gom rác: an toàn hơn nhưng tốn thêm chút tài nguyên;"
+     ]
+    },
+    {
+     "start": 378.512,
+     "end": 383.95,
+     "text": [
+      "Rust 用所有權規則，在編譯時就把關。",
+      "Rust dùng quy tắc sở hữu, kiểm soát ngay khi biên dịch."
+     ]
+    },
+    {
+     "start": 389.3,
+     "end": 391.2,
+     "text": [
+      "來看一個真實案例。",
+      "Hãy xem một trường hợp thực tế."
+     ]
+    },
+    {
+     "start": 391.2,
+     "end": 395.88,
+     "text": [
+      "Android 的大量系統程式碼用 C 與 C++ 撰寫，",
+      "Phần lớn mã hệ thống của Android được viết bằng C và C++."
+     ]
+    },
+    {
+     "start": 395.88,
+     "end": 401.15,
+     "text": [
+      "2019 年，記憶體安全漏洞占所有漏洞的 76%。",
+      "Năm 2019, lỗ hổng an toàn bộ nhớ chiếm 76% tổng số lỗ hổng."
+     ]
+    },
+    {
+     "start": 402.06,
+     "end": 404.78,
+     "text": [
+      "Google 的做法不是全部重寫，",
+      "Cách làm của Google không phải là viết lại tất cả,"
+     ]
+    },
+    {
+     "start": 404.78,
+     "end": 407.093,
+     "text": [
+      "而是讓新程式碼優先使用",
+      "mà là ưu tiên viết mã mới"
+     ]
+    },
+    {
+     "start": 407.093,
+     "end": 410.73,
+     "text": [
+      "Rust、Kotlin 這類記憶體安全的語言。",
+      "bằng các ngôn ngữ an toàn bộ nhớ như Rust và Kotlin."
+     ]
+    },
+    {
+     "start": 411.6,
+     "end": 416.42,
+     "text": [
+      "到了 2024 年，這個比例降到 24%。",
+      "Đến năm 2024, tỷ lệ này giảm xuống 24%."
+     ]
+    },
+    {
+     "start": 416.42,
+     "end": 420.263,
+     "text": [
+      "限制是：舊的 C 與 C++ 程式碼仍然存在，",
+      "Hạn chế: mã C và C++ cũ vẫn còn đó,"
+     ]
+    },
+    {
+     "start": 420.263,
+     "end": 424.55,
+     "text": [
+      "不同語言之間的銜接，也需要額外成本。",
+      "và việc kết nối giữa các ngôn ngữ cũng tốn thêm chi phí."
+     ]
+    },
+    {
+     "start": 429.8,
+     "end": 431.98,
+     "text": [
+      "那 AI 時代的語言呢？",
+      "Vậy còn ngôn ngữ của thời đại AI thì sao?"
+     ]
+    },
+    {
+     "start": 431.98,
+     "end": 433.975,
+     "text": [
+      "目前 AI 的主力仍是 Python，",
+      "Hiện nay Python vẫn là ngôn ngữ chủ lực của AI,"
+     ]
+    },
+    {
+     "start": 433.975,
+     "end": 440.15,
+     "text": [
+      "但真正的大量運算，多半交給底層的 C++ 與 GPU 程式。",
+      "nhưng phần tính toán nặng thường giao cho C++ và mã GPU ở tầng dưới."
+     ]
+    },
+    {
+     "start": 441.24,
+     "end": 444.18,
+     "text": [
+      "Mojo 想把兩者合而為一。",
+      "Mojo muốn hợp nhất cả hai."
+     ]
+    },
+    {
+     "start": 444.18,
+     "end": 447.44,
+     "text": [
+      "它在 2023 年由 Modular 公司發表，",
+      "Được công ty Modular công bố năm 2023,"
+     ]
+    },
+    {
+     "start": 447.44,
+     "end": 452.56,
+     "text": [
+      "語法接近 Python，卻能直接為 CPU 與 GPU 編譯；",
+      "cú pháp gần giống Python nhưng biên dịch trực tiếp cho CPU và GPU;"
+     ]
+    },
+    {
+     "start": 452.56,
+     "end": 456.47,
+     "text": [
+      "2026 年 8 月推出第一個穩定版 1.0。",
+      "tháng 8 năm 2026 ra mắt bản ổn định đầu tiên 1.0."
+     ]
+    },
+    {
+     "start": 457.3,
+     "end": 462.92,
+     "text": [
+      "另一個變化是：自然語言本身，正在成為寫程式的介面。",
+      "Một thay đổi khác: chính ngôn ngữ tự nhiên đang trở thành giao diện để lập trình."
+     ]
+    },
+    {
+     "start": 462.92,
+     "end": 467.87,
+     "text": [
+      "開發者用文字描述需求，再由 AI 助手產生程式碼。",
+      "Lập trình viên mô tả yêu cầu bằng lời, rồi trợ lý AI tạo ra mã."
+     ]
+    },
+    {
+     "start": 472.94,
+     "end": 475.487,
+     "text": [
+      "展望未來，Modular 已宣布",
+      "Nhìn về tương lai, Modular đã tuyên bố"
+     ]
+    },
+    {
+     "start": 475.487,
+     "end": 480.0,
+     "text": [
+      "將在 2026 年開放 Mojo 編譯器原始碼；",
+      "sẽ mở mã nguồn trình biên dịch Mojo trong năm 2026;"
+     ]
+    },
+    {
+     "start": 480.0,
+     "end": 481.42,
+     "text": [
+      "學界也正研究",
+      "giới học thuật cũng đang nghiên cứu"
+     ]
+    },
+    {
+     "start": 481.42,
+     "end": 485.05,
+     "text": [
+      "專為大型語言模型設計的程式語言。",
+      "ngôn ngữ lập trình dành riêng cho mô hình ngôn ngữ lớn."
+     ]
+    },
+    {
+     "start": 485.94,
+     "end": 486.9,
+     "text": [
+      "我們推測，",
+      "Chúng tôi suy đoán:"
+     ]
+    },
+    {
+     "start": 486.9,
+     "end": 491.64,
+     "text": [
+      "工程師會花更多時間描述需求與驗證結果；",
+      "kỹ sư sẽ dành nhiều thời gian hơn để mô tả yêu cầu và kiểm chứng kết quả;"
+     ]
+    },
+    {
+     "start": 491.64,
+     "end": 497.47,
+     "text": [
+      "而 AI 產生的程式碼是否正確、安全，仍是尚未解決的問題。",
+      "còn việc mã do AI tạo ra có đúng và an toàn hay không vẫn là vấn đề chưa có lời giải."
+     ]
+    },
+    {
+     "start": 502.62,
+     "end": 508.02,
+     "text": [
+      "從 0 與 1，到組合語言、高階語言，再到 AI。",
+      "Từ 0 và 1, đến hợp ngữ, ngôn ngữ bậc cao, rồi đến AI."
+     ]
+    },
+    {
+     "start": 508.02,
+     "end": 512.24,
+     "text": [
+      "每一步，都是讓人更容易把想法交給電腦。",
+      "Mỗi bước đều giúp con người dễ trao ý tưởng cho máy tính hơn."
+     ]
+    },
+    {
+     "start": 512.24,
+     "end": 516.13,
+     "text": [
+      "選擇語言時，先問：你要解決什麼問題？",
+      "Khi chọn ngôn ngữ, hãy hỏi trước: bạn cần giải quyết vấn đề gì?"
+     ]
+    }
+   ],
+   "en-US": [
+    {
+     "start": 0.86,
+     "end": 4.54,
+     "text": [
+      "電腦其實只看得懂 0 和 1。",
+      "Máy tính thực ra chỉ hiểu được số 0 và số 1."
+     ]
+    },
+    {
+     "start": 4.54,
+     "end": 8.32,
+     "text": [
+      "那為什麼世界上會有上千種程式語言？",
+      "Vậy tại sao thế giới lại có hàng nghìn ngôn ngữ lập trình?"
+     ]
+    },
+    {
+     "start": 8.32,
+     "end": 10.67,
+     "text": [
+      "因為每一種語言，都是人類為了解決某個問題，",
+      "Bởi vì mỗi ngôn ngữ là một cách phiên dịch"
+     ]
+    },
+    {
+     "start": 10.67,
+     "end": 13.63,
+     "text": [
+      "而發明的翻譯方式。",
+      "mà con người tạo ra để giải quyết một vấn đề nào đó."
+     ]
+    },
+    {
+     "start": 13.63,
+     "end": 17.93,
+     "text": [
+      "今天，我們走一趟七十年的旅程。",
+      "Hôm nay, chúng ta cùng đi một hành trình bảy mươi năm."
+     ]
+    },
+    {
+     "start": 20.64,
+     "end": 22.965,
+     "text": [
+      "最早的程式設計師，直接用機器碼寫程式：",
+      "Những lập trình viên đầu tiên viết thẳng bằng mã máy:"
+     ]
+    },
+    {
+     "start": 22.965,
+     "end": 29.65,
+     "text": [
+      "一長串的 0 與 1，寫錯一位，整個程式就出錯。",
+      "những chuỗi 0 và 1 dài, sai một bit là cả chương trình hỏng."
+     ]
+    },
+    {
+     "start": 30.5,
+     "end": 32.66,
+     "text": [
+      "接著出現組合語言，",
+      "Tiếp theo là hợp ngữ (assembly),"
+     ]
+    },
+    {
+     "start": 32.66,
+     "end": 38.32,
+     "text": [
+      "用 ADD、MOV 這樣的簡短代號，取代難記的數字。",
+      "dùng các mã ngắn như ADD, MOV thay cho những con số khó nhớ."
+     ]
+    },
+    {
+     "start": 38.32,
+     "end": 41.17,
+     "text": [
+      "但它仍然綁死在特定的機器上。",
+      "Nhưng nó vẫn bị gắn chặt với một loại máy cụ thể."
+     ]
+    },
+    {
+     "start": 42.1,
+     "end": 45.82,
+     "text": [
+      "真正的轉捩點在 1957 年。",
+      "Bước ngoặt thật sự đến vào năm 1957."
+     ]
+    },
+    {
+     "start": 45.82,
+     "end": 49.94,
+     "text": [
+      "IBM 的約翰．巴克斯團隊推出 FORTRAN，",
+      "Nhóm của John Backus tại IBM ra mắt FORTRAN."
+     ]
+    },
+    {
+     "start": 49.94,
+     "end": 54.385,
+     "text": [
+      "工程師第一次能用接近數學式的寫法，",
+      "Lần đầu tiên, kỹ sư có thể viết gần giống công thức toán học,"
+     ]
+    },
+    {
+     "start": 54.385,
+     "end": 59.11,
+     "text": [
+      "再由編譯器自動翻譯成機器碼。",
+      "rồi trình biên dịch tự động dịch sang mã máy."
+     ]
+    },
+    {
+     "start": 60.02,
+     "end": 63.36,
+     "text": [
+      "這就是高階程式語言的起點：",
+      "Đó là khởi đầu của ngôn ngữ lập trình bậc cao:"
+     ]
+    },
+    {
+     "start": 63.36,
+     "end": 67.41,
+     "text": [
+      "讓人用人的方式思考，把翻譯工作交給電腦。",
+      "con người suy nghĩ theo cách của con người, còn máy tính lo việc phiên dịch."
+     ]
+    },
+    {
+     "start": 69.88,
+     "end": 75.2,
+     "text": [
+      "高階語言是怎麼變成電腦能執行的指令？",
+      "Ngôn ngữ bậc cao trở thành lệnh máy tính chạy được bằng cách nào?"
+     ]
+    },
+    {
+     "start": 75.2,
+     "end": 77.91,
+     "text": [
+      "我們拿一行程式來拆解。",
+      "Hãy cùng mổ xẻ một dòng mã."
+     ]
+    },
+    {
+     "start": 78.84,
+     "end": 81.32,
+     "text": [
+      "第一種方式是編譯。",
+      "Cách thứ nhất là biên dịch."
+     ]
+    },
+    {
+     "start": 81.32,
+     "end": 85.18,
+     "text": [
+      "像 C 與 Rust，會在執行前",
+      "Như C và Rust: trước khi chạy,"
+     ]
+    },
+    {
+     "start": 85.18,
+     "end": 87.78,
+     "text": [
+      "把整份程式，一次翻譯成機器碼。",
+      "dịch toàn bộ chương trình sang mã máy một lần."
+     ]
+    },
+    {
+     "start": 87.78,
+     "end": 91.87,
+     "text": [
+      "執行很快，但每次修改都要重新編譯。",
+      "Chạy rất nhanh, nhưng mỗi lần sửa đều phải biên dịch lại."
+     ]
+    },
+    {
+     "start": 92.84,
+     "end": 95.32,
+     "text": [
+      "第二種方式是直譯。",
+      "Cách thứ hai là thông dịch."
+     ]
+    },
+    {
+     "start": 95.32,
+     "end": 100.08,
+     "text": [
+      "像 Python，由直譯器一邊讀、一邊執行，",
+      "Như Python: trình thông dịch vừa đọc vừa chạy."
+     ]
+    },
+    {
+     "start": 100.08,
+     "end": 103.23,
+     "text": [
+      "修改後馬上能看到結果，代價是通常比較慢。",
+      "Sửa xong thấy kết quả ngay, đổi lại thường chạy chậm hơn."
+     ]
+    },
+    {
+     "start": 104.2,
+     "end": 106.44,
+     "text": [
+      "Java 和 C# 走中間路線：",
+      "Java và C# đi con đường ở giữa:"
+     ]
+    },
+    {
+     "start": 106.44,
+     "end": 111.7,
+     "text": [
+      "先編譯成中間碼，再交給虛擬機器，",
+      "biên dịch sang mã trung gian, rồi giao cho máy ảo,"
+     ]
+    },
+    {
+     "start": 111.7,
+     "end": 116.87,
+     "text": [
+      "執行時把常用的部分即時編譯，兼顧可攜性與速度。",
+      "khi chạy thì biên dịch tức thời phần dùng nhiều, cân bằng tính di động và tốc độ."
+     ]
+    },
+    {
+     "start": 117.82,
+     "end": 119.32,
+     "text": [
+      "記住這個取捨：",
+      "Hãy nhớ sự đánh đổi này:"
+     ]
+    },
+    {
+     "start": 119.32,
+     "end": 123.44,
+     "text": [
+      "抽象層級越高，越好寫、越安全；",
+      "mức trừu tượng càng cao thì càng dễ viết, càng an toàn;"
+     ]
+    },
+    {
+     "start": 123.44,
+     "end": 126.81,
+     "text": [
+      "越接近硬體，越能掌控效能，",
+      "Càng gần phần cứng thì càng kiểm soát được hiệu năng,"
+     ]
+    },
+    {
+     "start": 126.81,
+     "end": 129.17,
+     "text": [
+      "但責任也越大。",
+      "nhưng trách nhiệm cũng càng lớn."
+     ]
+    },
+    {
+     "start": 132.08,
+     "end": 135.18,
+     "text": [
+      "把七十年攤開在時間軸上。",
+      "Hãy trải bảy mươi năm lên một dòng thời gian."
+     ]
+    },
+    {
+     "start": 135.18,
+     "end": 139.52,
+     "text": [
+      "1950 年代，FORTRAN 負責科學計算，",
+      "Thập niên 1950, FORTRAN lo tính toán khoa học,"
+     ]
+    },
+    {
+     "start": 139.52,
+     "end": 144.03,
+     "text": [
+      "LISP 開啟人工智慧研究，COBOL 處理商業資料。",
+      "LISP mở đầu nghiên cứu trí tuệ nhân tạo, COBOL xử lý dữ liệu kinh doanh."
+     ]
+    },
+    {
+     "start": 144.96,
+     "end": 149.92,
+     "text": [
+      "1972 年，貝爾實驗室的丹尼斯．里奇設計出 C 語言，",
+      "Năm 1972, Dennis Ritchie ở Bell Labs tạo ra ngôn ngữ C"
+     ]
+    },
+    {
+     "start": 149.92,
+     "end": 152.46,
+     "text": [
+      "用來撰寫 Unix 作業系統。",
+      "để viết hệ điều hành Unix."
+     ]
+    },
+    {
+     "start": 152.46,
+     "end": 158.21,
+     "text": [
+      "兩年後，IBM 發表了查詢資料庫的 SQL 前身。",
+      "Hai năm sau, IBM công bố tiền thân của SQL để truy vấn cơ sở dữ liệu."
+     ]
+    },
+    {
+     "start": 159.16,
+     "end": 162.64,
+     "text": [
+      "1980 年代，物件導向興起：",
+      "Thập niên 1980, lập trình hướng đối tượng trỗi dậy:"
+     ]
+    },
+    {
+     "start": 162.64,
+     "end": 169.11,
+     "text": [
+      "C++ 在 C 的基礎上加入類別，讓大型軟體更容易組織。",
+      "C++ thêm lớp (class) vào C, giúp phần mềm lớn dễ tổ chức hơn."
+     ]
+    },
+    {
+     "start": 170.0,
+     "end": 174.86,
+     "text": [
+      "1990 年代，個人電腦與網際網路爆發：",
+      "Thập niên 1990, máy tính cá nhân và Internet bùng nổ:"
+     ]
+    },
+    {
+     "start": 174.86,
+     "end": 177.92,
+     "text": [
+      "Python、Visual Basic、R、",
+      "Python, Visual Basic, R,"
+     ]
+    },
+    {
+     "start": 177.92,
+     "end": 181.61,
+     "text": [
+      "Java 和 JavaScript 都在這十年誕生。",
+      "Java và JavaScript đều ra đời trong thập niên này."
+     ]
+    },
+    {
+     "start": 182.52,
+     "end": 185.285,
+     "text": [
+      "進入新世紀，微軟推出 C#；",
+      "Sang thế kỷ mới, Microsoft ra mắt C#;"
+     ]
+    },
+    {
+     "start": 185.285,
+     "end": 188.205,
+     "text": [
+      "2015 年，Rust 發布 1.0，",
+      "Năm 2015, Rust phát hành bản 1.0,"
+     ]
+    },
+    {
+     "start": 188.205,
+     "end": 192.265,
+     "text": [
+      "主打不需要垃圾回收的記憶體安全。",
+      "nhấn mạnh an toàn bộ nhớ mà không cần bộ thu gom rác."
+     ]
+    },
+    {
+     "start": 192.265,
+     "end": 197.45,
+     "text": [
+      "到了 2020 年代，AI 成為新的推力。",
+      "Đến thập niên 2020, AI trở thành động lực mới."
+     ]
+    },
+    {
+     "start": 200.56,
+     "end": 203.28,
+     "text": [
+      "這麼多語言，哪些最多人用？",
+      "Nhiều ngôn ngữ như vậy, ngôn ngữ nào được dùng nhiều nhất?"
+     ]
+    },
+    {
+     "start": 203.28,
+     "end": 206.82,
+     "text": [
+      "TIOBE 指數每個月統計一次，",
+      "Chỉ số TIOBE được cập nhật mỗi tháng,"
+     ]
+    },
+    {
+     "start": 206.82,
+     "end": 211.72,
+     "text": [
+      "計算各語言在 Google、Bing、維基百科",
+      "đếm kết quả của từng ngôn ngữ trên Google, Bing, Wikipedia"
+     ]
+    },
+    {
+     "start": 211.72,
+     "end": 214.69,
+     "text": [
+      "等二十多個搜尋來源的相關結果。",
+      "và hơn hai mươi nguồn tìm kiếm khác."
+     ]
+    },
+    {
+     "start": 215.52,
+     "end": 219.58,
+     "text": [
+      "要注意，它反映的是熱門程度與學習資源，",
+      "Lưu ý: chỉ số này phản ánh mức độ phổ biến và tài nguyên học tập,"
+     ]
+    },
+    {
+     "start": 219.58,
+     "end": 222.94,
+     "text": [
+      "不是語言的好壞，也不是程式碼的數量。",
+      "không phải ngôn ngữ tốt hay dở, cũng không phải lượng mã được viết."
+     ]
+    },
+    {
+     "start": 222.94,
+     "end": 225.83,
+     "text": [
+      "以下採用 2026 年 9 月的榜單。",
+      "Dưới đây dùng bảng xếp hạng tháng 9 năm 2026."
+     ]
+    },
+    {
+     "start": 228.36,
+     "end": 232.405,
+     "text": [
+      "把前十名放回它們誕生的年代，會發現一件事：",
+      "Đặt mười ngôn ngữ hàng đầu về đúng năm ra đời, một điều nổi bật:"
+     ]
+    },
+    {
+     "start": 232.405,
+     "end": 237.98,
+     "text": [
+      "1972 年的 C 依然排第二，",
+      "C, ra đời năm 1972, vẫn đứng thứ hai,"
+     ]
+    },
+    {
+     "start": 237.98,
+     "end": 241.77,
+     "text": [
+      "而最年輕的 Rust，已經擠進第十名。",
+      "còn Rust, ngôn ngữ trẻ nhất, đã lọt vào vị trí thứ mười."
+     ]
+    },
+    {
+     "start": 244.88,
+     "end": 249.62,
+     "text": [
+      "第一名 Python，市占約 17.8%。",
+      "Hạng nhất là Python, khoảng 17,8%."
+     ]
+    },
+    {
+     "start": 249.62,
+     "end": 253.5,
+     "text": [
+      "語法簡潔，加上豐富的套件，",
+      "Cú pháp gọn cùng kho thư viện phong phú"
+     ]
+    },
+    {
+     "start": 253.5,
+     "end": 256.85,
+     "text": [
+      "是資料科學與 AI 的共同語言。",
+      "khiến nó thành ngôn ngữ chung của khoa học dữ liệu và AI."
+     ]
+    },
+    {
+     "start": 258.1,
+     "end": 262.32,
+     "text": [
+      "第二名 C，約 10.3%。",
+      "Hạng hai là C, khoảng 10,3%."
+     ]
+    },
+    {
+     "start": 262.32,
+     "end": 267.27,
+     "text": [
+      "作業系統、嵌入式裝置與驅動程式，至今仍大量依賴它。",
+      "Hệ điều hành, thiết bị nhúng và trình điều khiển đến nay vẫn phụ thuộc nhiều vào nó."
+     ]
+    },
+    {
+     "start": 268.66,
+     "end": 273.22,
+     "text": [
+      "第三名 C++，約 8.7%。",
+      "Hạng ba là C++, khoảng 8,7%."
+     ]
+    },
+    {
+     "start": 273.22,
+     "end": 277.26,
+     "text": [
+      "遊戲引擎、瀏覽器與高頻交易系統，",
+      "Game engine, trình duyệt và hệ thống giao dịch tần suất cao"
+     ]
+    },
+    {
+     "start": 277.26,
+     "end": 279.49,
+     "text": [
+      "需要它的速度與控制力。",
+      "cần tốc độ và khả năng kiểm soát của nó."
+     ]
+    },
+    {
+     "start": 280.88,
+     "end": 284.7,
+     "text": [
+      "第四名 Java，約 7.5%。",
+      "Hạng tư là Java, khoảng 7,5%."
+     ]
+    },
+    {
+     "start": 284.7,
+     "end": 287.48,
+     "text": [
+      "一次編寫、到處執行，",
+      "Viết một lần, chạy mọi nơi:"
+     ]
+    },
+    {
+     "start": 287.48,
+     "end": 291.33,
+     "text": [
+      "撐起大量企業後端與 Android 應用。",
+      "nó vận hành vô số hệ thống doanh nghiệp và ứng dụng Android."
+     ]
+    },
+    {
+     "start": 292.74,
+     "end": 297.36,
+     "text": [
+      "第五名 C#，約 4.2%。",
+      "Hạng năm là C#, khoảng 4,2%."
+     ]
+    },
+    {
+     "start": 297.36,
+     "end": 299.54,
+     "text": [
+      "微軟的主力語言，",
+      "Ngôn ngữ chủ lực của Microsoft,"
+     ]
+    },
+    {
+     "start": 299.54,
+     "end": 303.91,
+     "text": [
+      "常見於 Windows 應用、雲端服務與 Unity 遊戲開發。",
+      "phổ biến trong ứng dụng Windows, dịch vụ đám mây và game Unity."
+     ]
+    },
+    {
+     "start": 305.16,
+     "end": 309.78,
+     "text": [
+      "第六名 JavaScript，約 2.8%。",
+      "Hạng sáu là JavaScript, khoảng 2,8%."
+     ]
+    },
+    {
+     "start": 309.78,
+     "end": 312.22,
+     "text": [
+      "它是瀏覽器內建的語言，",
+      "Nó được tích hợp sẵn trong mọi trình duyệt;"
+     ]
+    },
+    {
+     "start": 312.22,
+     "end": 315.85,
+     "text": [
+      "幾乎每個網頁的互動都靠它。",
+      "hầu như mọi tương tác trên web đều nhờ nó."
+     ]
+    },
+    {
+     "start": 317.1,
+     "end": 321.98,
+     "text": [
+      "第七名 Visual Basic，約 2.6%。",
+      "Hạng bảy là Visual Basic, khoảng 2,6%."
+     ]
+    },
+    {
+     "start": 321.98,
+     "end": 326.39,
+     "text": [
+      "在 Office 自動化與企業舊系統中，依然常見。",
+      "Vẫn thường gặp trong tự động hóa Office và các hệ thống doanh nghiệp cũ."
+     ]
+    },
+    {
+     "start": 327.64,
+     "end": 332.28,
+     "text": [
+      "第八名 SQL，約 2.2%。",
+      "Hạng tám là SQL, khoảng 2,2%."
+     ]
+    },
+    {
+     "start": 332.28,
+     "end": 337.55,
+     "text": [
+      "它不寫應用程式，而是專門向資料庫查詢與管理資料。",
+      "Nó không dùng để viết ứng dụng mà chuyên truy vấn và quản lý dữ liệu trong cơ sở dữ liệu."
+     ]
+    },
+    {
+     "start": 338.74,
+     "end": 342.92,
+     "text": [
+      "第九名 R，約 1.7%。",
+      "Hạng chín là R, khoảng 1,7%."
+     ]
+    },
+    {
+     "start": 342.92,
+     "end": 344.66,
+     "text": [
+      "由統計學家設計，",
+      "Do các nhà thống kê thiết kế,"
+     ]
+    },
+    {
+     "start": 344.66,
+     "end": 348.71,
+     "text": [
+      "擅長統計分析與資料視覺化。",
+      "mạnh về phân tích thống kê và trực quan hóa dữ liệu."
+     ]
+    },
+    {
+     "start": 349.9,
+     "end": 354.2,
+     "text": [
+      "第十名 Rust，約 1.3%。",
+      "Hạng mười là Rust, khoảng 1,3%."
+     ]
+    },
+    {
+     "start": 354.2,
+     "end": 357.2,
+     "text": [
+      "在編譯時就檢查記憶體錯誤，",
+      "Nó bắt lỗi bộ nhớ ngay khi biên dịch"
+     ]
+    },
+    {
+     "start": 357.2,
+     "end": 361.25,
+     "text": [
+      "正逐步進入作業系統與基礎設施。",
+      "và đang dần đi vào hệ điều hành và hạ tầng."
+     ]
+    },
+    {
+     "start": 363.74,
+     "end": 366.56,
+     "text": [
+      "把十種語言放在同一張表比較：",
+      "So sánh mười ngôn ngữ trên cùng một bảng:"
+     ]
+    },
+    {
+     "start": 366.56,
+     "end": 371.22,
+     "text": [
+      "執行方式、記憶體管理、型別檢查，",
+      "cách thực thi, cách quản lý bộ nhớ và cách kiểm tra kiểu,"
+     ]
+    },
+    {
+     "start": 371.22,
+     "end": 374.07,
+     "text": [
+      "決定了它們各自擅長的戰場。",
+      "quyết định thế mạnh riêng của từng ngôn ngữ."
+     ]
+    },
+    {
+     "start": 375.0,
+     "end": 380.82,
+     "text": [
+      "C 與 C++ 手動管理記憶體，速度快但容易出錯；",
+      "C và C++ quản lý bộ nhớ thủ công: nhanh nhưng dễ sai;"
+     ]
+    },
+    {
+     "start": 380.82,
+     "end": 387.48,
+     "text": [
+      "Java、C#、Python 用垃圾回收，安全但多一點負擔；",
+      "Java, C#, Python dùng thu gom rác: an toàn hơn nhưng tốn thêm chút tài nguyên;"
+     ]
+    },
+    {
+     "start": 387.48,
+     "end": 391.53,
+     "text": [
+      "Rust 用所有權規則，在編譯時就把關。",
+      "Rust dùng quy tắc sở hữu, kiểm soát ngay khi biên dịch."
+     ]
+    },
+    {
+     "start": 394.7,
+     "end": 395.41,
+     "text": [
+      "來看一個真實案例。",
+      "Hãy xem một trường hợp thực tế."
+     ]
+    },
+    {
+     "start": 395.41,
+     "end": 399.42,
+     "text": [
+      "Android 的大量系統程式碼用 C 與 C++ 撰寫，",
+      "Phần lớn mã hệ thống của Android được viết bằng C và C++."
+     ]
+    },
+    {
+     "start": 399.42,
+     "end": 406.75,
+     "text": [
+      "2019 年，記憶體安全漏洞占所有漏洞的 76%。",
+      "Năm 2019, lỗ hổng an toàn bộ nhớ chiếm 76% tổng số lỗ hổng."
+     ]
+    },
+    {
+     "start": 407.6,
+     "end": 410.74,
+     "text": [
+      "Google 的做法不是全部重寫，",
+      "Cách làm của Google không phải là viết lại tất cả,"
+     ]
+    },
+    {
+     "start": 410.74,
+     "end": 411.92,
+     "text": [
+      "而是讓新程式碼優先使用",
+      "mà là ưu tiên viết mã mới"
+     ]
+    },
+    {
+     "start": 411.92,
+     "end": 415.47,
+     "text": [
+      "Rust、Kotlin 這類記憶體安全的語言。",
+      "bằng các ngôn ngữ an toàn bộ nhớ như Rust và Kotlin."
+     ]
+    },
+    {
+     "start": 416.56,
+     "end": 421.2,
+     "text": [
+      "到了 2024 年，這個比例降到 24%。",
+      "Đến năm 2024, tỷ lệ này giảm xuống 24%."
+     ]
+    },
+    {
+     "start": 421.2,
+     "end": 425.78,
+     "text": [
+      "限制是：舊的 C 與 C++ 程式碼仍然存在，",
+      "Hạn chế: mã C và C++ cũ vẫn còn đó,"
+     ]
+    },
+    {
+     "start": 425.78,
+     "end": 428.61,
+     "text": [
+      "不同語言之間的銜接，也需要額外成本。",
+      "và việc kết nối giữa các ngôn ngữ cũng tốn thêm chi phí."
+     ]
+    },
+    {
+     "start": 431.54,
+     "end": 434.7,
+     "text": [
+      "那 AI 時代的語言呢？",
+      "Vậy còn ngôn ngữ của thời đại AI thì sao?"
+     ]
+    },
+    {
+     "start": 434.7,
+     "end": 437.64,
+     "text": [
+      "目前 AI 的主力仍是 Python，",
+      "Hiện nay Python vẫn là ngôn ngữ chủ lực của AI,"
+     ]
+    },
+    {
+     "start": 437.64,
+     "end": 443.67,
+     "text": [
+      "但真正的大量運算，多半交給底層的 C++ 與 GPU 程式。",
+      "nhưng phần tính toán nặng thường giao cho C++ và mã GPU ở tầng dưới."
+     ]
+    },
+    {
+     "start": 444.8,
+     "end": 447.4,
+     "text": [
+      "Mojo 想把兩者合而為一。",
+      "Mojo muốn hợp nhất cả hai."
+     ]
+    },
+    {
+     "start": 447.4,
+     "end": 450.38,
+     "text": [
+      "它在 2023 年由 Modular 公司發表，",
+      "Được công ty Modular công bố năm 2023,"
+     ]
+    },
+    {
+     "start": 450.38,
+     "end": 455.78,
+     "text": [
+      "語法接近 Python，卻能直接為 CPU 與 GPU 編譯；",
+      "cú pháp gần giống Python nhưng biên dịch trực tiếp cho CPU và GPU;"
+     ]
+    },
+    {
+     "start": 455.78,
+     "end": 460.71,
+     "text": [
+      "2026 年 8 月推出第一個穩定版 1.0。",
+      "tháng 8 năm 2026 ra mắt bản ổn định đầu tiên 1.0."
+     ]
+    },
+    {
+     "start": 461.6,
+     "end": 467.5,
+     "text": [
+      "另一個變化是：自然語言本身，正在成為寫程式的介面。",
+      "Một thay đổi khác: chính ngôn ngữ tự nhiên đang trở thành giao diện để lập trình."
+     ]
+    },
+    {
+     "start": 467.5,
+     "end": 472.83,
+     "text": [
+      "開發者用文字描述需求，再由 AI 助手產生程式碼。",
+      "Lập trình viên mô tả yêu cầu bằng lời, rồi trợ lý AI tạo ra mã."
+     ]
+    },
+    {
+     "start": 475.56,
+     "end": 477.86,
+     "text": [
+      "展望未來，Modular 已宣布",
+      "Nhìn về tương lai, Modular đã tuyên bố"
+     ]
+    },
+    {
+     "start": 477.86,
+     "end": 481.82,
+     "text": [
+      "將在 2026 年開放 Mojo 編譯器原始碼；",
+      "sẽ mở mã nguồn trình biên dịch Mojo trong năm 2026;"
+     ]
+    },
+    {
+     "start": 481.82,
+     "end": 484.68,
+     "text": [
+      "學界也正研究",
+      "giới học thuật cũng đang nghiên cứu"
+     ]
+    },
+    {
+     "start": 484.68,
+     "end": 486.99,
+     "text": [
+      "專為大型語言模型設計的程式語言。",
+      "ngôn ngữ lập trình dành riêng cho mô hình ngôn ngữ lớn."
+     ]
+    },
+    {
+     "start": 488.0,
+     "end": 491.31,
+     "text": [
+      "我們推測，",
+      "Chúng tôi suy đoán:"
+     ]
+    },
+    {
+     "start": 491.31,
+     "end": 495.04,
+     "text": [
+      "工程師會花更多時間描述需求與驗證結果；",
+      "kỹ sư sẽ dành nhiều thời gian hơn để mô tả yêu cầu và kiểm chứng kết quả;"
+     ]
+    },
+    {
+     "start": 495.04,
+     "end": 500.11,
+     "text": [
+      "而 AI 產生的程式碼是否正確、安全，仍是尚未解決的問題。",
+      "còn việc mã do AI tạo ra có đúng và an toàn hay không vẫn là vấn đề chưa có lời giải."
+     ]
+    },
+    {
+     "start": 503.08,
+     "end": 509.24,
+     "text": [
+      "從 0 與 1，到組合語言、高階語言，再到 AI。",
+      "Từ 0 và 1, đến hợp ngữ, ngôn ngữ bậc cao, rồi đến AI."
+     ]
+    },
+    {
+     "start": 509.24,
+     "end": 513.78,
+     "text": [
+      "每一步，都是讓人更容易把想法交給電腦。",
+      "Mỗi bước đều giúp con người dễ trao ý tưởng cho máy tính hơn."
+     ]
+    },
+    {
+     "start": 513.78,
+     "end": 518.45,
+     "text": [
+      "選擇語言時，先問：你要解決什麼問題？",
+      "Khi chọn ngôn ngữ, hãy hỏi trước: bạn cần giải quyết vấn đề gì?"
+     ]
+    }
+   ]
+  }
+ }
+}
